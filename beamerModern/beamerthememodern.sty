@@ -1,0 +1,56 @@
+\mode<all>
+
+% font encoding
+\usepackage[utf8]{inputenc}
+\usepackage[lf]{Baskervaldx}
+\usepackage[bigdelims,vvarbb]{newtxmath} % math italic letters from Nimbus Roman
+\usepackage[cal=boondoxo]{mathalfa} % mathcal from STIX, unslanted a bit
+\renewcommand*\oldstylenums[1]{\textosf{#1}}
+\usepackage{fix-cm} % for fully scalable Computer Modern fonts
+\usepackage[fontsize=11pt]{fontsize}
+
+% options
+\newif\if@bgphoto
+\@bgphotofalse
+\DeclareOption{bgphoto}{\@bgphototrue}
+
+\newif\if@nologo
+\@nologofalse
+\DeclareOption{nologo}{\@nologotrue}
+\ProcessOptions
+
+\RequirePackage{tikz}
+\usetikzlibrary{calc}
+\graphicspath{{beamer_img/}}
+
+\RequirePackage{etoolbox} % \patchcmd
+
+\useinnertheme{modern}
+\useoutertheme{modern}
+\usecolortheme{modern}
+
+%\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{navigation symbols}{%
+    \insertslidenavigationsymbol%
+    \insertframenavigationsymbol%
+    \insertsubsectionnavigationsymbol%
+    \insertsectionnavigationsymbol%
+    % Add or remove symbols as needed
+}
+\setbeamercolor{navigation symbols}{fg=black}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{itemize items}[square]
+\setbeamertemplate{itemize subitem}[triangle]
+
+% Set margins.
+\setbeamersize{text margin left=\xshift, text margin right=\xshift}
+\setlength{\leftmargini}{\xshift}
+
+\let\oldtoc\tableofcontents
+\renewcommand{\tableofcontents}[1][]{%
+    \hspace*{0.5\xshift}
+    \begin{minipage}{\textwidth}
+        \oldtoc[#1]
+    \end{minipage}
+}

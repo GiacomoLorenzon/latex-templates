@@ -1,0 +1,29 @@
+\documentclass[a4paper,10pt,twoside,titlepage]{book}
+\usepackage{settings}
+
+\begin{document}
+
+    \renewcommand{\title}{Main title}
+    \newcommand{\subtitle}{subtitle}
+    \newcommand{\firstprofessor}{First professor}
+    \newcommand{\secondprofessor}{Second professor}
+    
+    % initial notes
+    \newcommand{\initialNotes}
+    {
+        Initial notes.
+    }
+    
+    % Main document
+    % title
+    \input{./chapters/title.tex}
+    % main body
+    \input{./chapters/initial_notes.tex}
+    \input{./chapters/introduction.tex}
+    \input{./chapters/conclusions.tex}
+    % bibliography
+    \input{./bibliography/bibliography.tex}
+    % appendix
+    \input{./chapters/appendix.tex}
+
+\end{document}

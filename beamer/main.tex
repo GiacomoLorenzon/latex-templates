@@ -1,0 +1,49 @@
+\documentclass{beamer}
+
+\usetheme[bgphoto]{polimi}
+% Usage instructions can be found at: https://github.com/elauksap/beamerthemepolimi
+
+\usepackage[utf8]{inputenc}
+
+\title{A Working Title}
+\subtitle{A (Hopefully) Working Subtitle}
+\author{Author Name}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+\begin{frame}{Table of contents}
+    \tableofcontents
+\end{frame}
+
+\section{Nuova sezione}
+\subsection{Sottosezione}
+\begin{frame}{Nuova slide}
+    Il testo della slide.
+    \begin{itemize}
+        \item Elenco puntato.
+        \begin{itemize}
+            \item Altro elenco puntato.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Altra slide}
+    \begin{block}{Blocco generico}
+    Testo.
+    \end{block}
+
+    \begin{alertblock}{Allerta}
+        Minghie.
+    \end{alertblock}
+
+    \begin{exampleblock}{Esempio}
+        Esempietto.
+    \end{exampleblock}
+\end{frame}
+
+\end{document}

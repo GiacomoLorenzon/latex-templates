@@ -1,0 +1,25 @@
+\documentclass[a4paper,12pt,twoside,titlepage]{book}
+\usepackage{settings}
+
+\begin{document}
+
+%\layout
+
+% TITLE
+\import{./0_front}{title.tex}
+
+% MAIN BODY
+\import{.}{introduction/introduction.tex}
+\import{./chapter_1}{chapter_1.tex}
+\import{.}{conclusions/conclusions.tex}
+
+% BIBLIOGRAPHY
+\import{00_bibliography}{bibliography.tex}
+
+% APPENDIX
+\import{./00_appendix}{appendix.tex}
+
+% ACKNOWLEDGMENTS
+\import{./00_acknowledgments}{acknowledgments.tex}
+
+\end{document}

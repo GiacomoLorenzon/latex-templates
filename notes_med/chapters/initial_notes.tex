@@ -1,0 +1,26 @@
+\startpreamble
+\setcounter{page}{1}
+
+\chapter*{Note iniziali}
+\addcontentsline{toc}{chapter}{Note iniziali}
+\initialNotes
+
+\newpage
+\thispagestyle{empty}
+
+% Table of contents
+\thispagestyle{empty}
+\tableofcontents
+\addcontentsline{toc}{chapter}{Indice}
+\addtocontents{toc}{\vspace{1em}}
+
+\thispagestyle{empty}
+\cleardoublepage
+\listoftables
+\listoffigures
+
+%%%%%%%%%%%
+\mainmatter
+\pagestyle{mainmatterstyle}
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics

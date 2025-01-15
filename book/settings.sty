@@ -1,0 +1,138 @@
+\ProvidesPackage{settings}
+
+% PACKAGES FOR SETUP
+\usepackage{import, xcolor}
+\usepackage[
+paperheight=17.5cm,
+paperwidth=10.5cm,
+showframe,
+includehead,
+includefoot,
+headheight=0.6cm,
+inner=1.3cm,
+outer=1.3cm,
+top=1.6cm,
+bottom=1.8cm,
+marginparsep=0.2cm,
+marginparwidth=1.3cm]{geometry}
+
+% PACKAGES FOR LANGUAGE AND FONT
+\usepackage[utf8]{inputenc}
+\usepackage[greek, italian]{babel} % british
+\usepackage{iflang}
+\usepackage[T1]{fontenc}
+\usepackage{blindtext, csquotes}
+\usepackage[lf]{Baskervaldx}
+\usepackage[bigdelims,vvarbb]{newtxmath} % math italic letters from Nimbus Roman
+\usepackage[cal=boondoxo]{mathalfa} % mathcal from STIX, unslanted a bit
+\renewcommand*\oldstylenums[1]{\textosf{#1}}
+\usepackage{fix-cm} % for fully scalable Computer Modern fonts
+\usepackage[fontsize=9pt]{fontsize}
+
+% PACKAGES FOR TITLES
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+{\vspace{-2em}\centering\large\normalfont\scshape}
+{\thechapter}{0pt}{\centering\large\normalfont\scshape\ \vspace{2cm}}
+
+% PACKAGES FOR PAGES FORMATTING
+\usepackage{parskip, layout, afterpage, fancyhdr, xstring, lipsum}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \newpage
+}
+
+\newcommand{\startpreamble}{
+    \pagestyle{fancy} % Change the header style
+    \fancyhf{} % Clear header and footer
+    \renewcommand{\chaptermark}[1]{\markboth{##1}{}} % Getting the chapter name right
+    \rhead{}
+    \lhead{}
+    \renewcommand{\headrulewidth}{0pt}
+    \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the preamble pages
+}
+
+\newcommand{\startmainmatter}{
+    \fancyhf{} % Clear all header and footer fields
+    \fancyfoot[C]{\thepage} % Center the page number in the footer
+    \renewcommand{\headrulewidth}{0pt} % Remove the header rule
+    \renewcommand{\footrulewidth}{0pt} % Remove the footer rule
+    \mainmatter
+}
+
+% Dedica
+\newcommand{\dedication}[1]{%
+    \null
+    \begin{flushright}
+        \slshape
+        \small
+        \vspace{4cm}
+        #1
+        \vfill
+    \end{flushright}
+    \thispagestyle{empty}%
+    \newpage
+}
+
+\RequirePackage{xkeyval}
+\makeatletter
+\renewcommand*\cleardoublepage{%
+    \clearpage\if@twoside\ifodd\c@page\else
+    \null
+    \thispagestyle{empty}%
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+% Redefine \chapter to suppress page number on the first page of chapters
+\makeatletter
+\renewcommand{\chapter}{
+    \if@openright\cleardoublepage\else\clearpage\fi
+    \thispagestyle{empty} % Suppress page number on first page of chapter
+    \global\@topnum\z@
+    \@afterindentfalse
+    \secdef\@chapter\@schapter
+}
+\makeatother
+
+% PACKAGES FOR IMAGES
+\usepackage{graphics, graphicx, transparent, setspace, tikz, float, color}
+\usepackage{caption}
+\captionsetup{font={small}}
+\graphicspath{{immagini/}}
+
+% PACKAGES FOR HYPERLINK
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+    citecolor=black,
+}
+
+% PACKAGES FOR REFERENCES & BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+sorting=ynt
+]{biblatex}
+\usepackage[nottoc,numbib]{tocbibind}
+\addbibresource{bibliography.bib}
+% You may use a different style adapted to your field
+% see https://it.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
+
+% PACKAGES FOR ITEMIZE & ENUMERATES 
+\usepackage{enumitem}
+\setlist{nosep}
+
+% Altri pacchetti
+\usepackage{comment, tcolorbox}
+
+% PARAGRAPH INDENTATION
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.0em}
+\renewcommand{\baselinestretch}{1}
+\setlength{\columnsep}{0.3cm}

@@ -1,0 +1,171 @@
+\ProvidesPackage{settings}
+
+% PACKAGES FOR SETUP
+\usepackage{import, multicol, xcolor}
+\usepackage[
+    showframe,
+    includehead,
+    headheight=0.6cm,
+    inner=2.7cm,
+    outer=4.7cm,
+    top=3.2cm,
+    bottom=6.9cm]{geometry}
+\setlength{\columnsep}{0.5cm}
+
+% PACKAGES FOR TITLES
+\usepackage{titlesec}
+
+% PACKAGES FOR LANGUAGE AND FONT
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{blindtext, csquotes, amsfonts}
+
+% PACKAGES FOR PAGES FORMATTING
+\usepackage{parskip, changepage, layout, afterpage,lipsum, fancyhdr, xstring}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \newpage
+}
+
+\renewcommand{\baselinestretch}{1.1}
+
+% Define new command: numbered and un-numbered chapter in Polimi style. 
+
+\let\latexchapter\chapter
+\renewcommand{\chapter}{\@ifstar{\polimichapterstar}{\polimichapter}}
+
+\newcommand{\polimichapter}[1]{
+    \cleardoublepage % To make sure the previous headers are passed
+    \phantomsection % To help hyperref link to the right page
+    \latexchapter{#1}
+    \renewcommand{\headrulewidth}{0pt} %removing the horizontal line in the header
+    %\addcontentsline{toc}{chapter}{#1} % Also adds the chapter name to the Contents
+    \fancyhead[RO]{{\slshape{\nouppercase{\rightmark}}}}
+    \fancyhead[LO]{}
+    \fancyhead[RE]{}
+    \fancyhead[LE]{{\slshape{\nouppercase{\thechapter}}} | {\slshape{\nouppercase{#1}}}}
+    \vspace{-1cm}
+}
+
+\newcommand{\polimichapterstar}[1]{
+    \cleardoublepage % To make sure the previous headers are passed
+    \phantomsection % To help hyperref link to the right page
+    \latexchapter*{#1} 
+    \renewcommand{\headrulewidth}{0pt} %removing the horizontal line in the header
+    %\addcontentsline{toc}{chapter}{#1} % Also adds the chapter name to the Contents
+    \fancyhead[RO]{}
+    \fancyhead[LO]{}
+    \fancyhead[RE]{}
+    \fancyhead[LE]{\slshape{\nouppercase{#1}}}
+    \fancyfoot[C]{\thepage}
+    \vspace{-1cm}
+}
+
+% Define new command: start preamble
+\newcommand{\startpreamble}{
+	\pagestyle{fancy} % Change the header style
+	\fancyhf{}% Clear header and footer
+	\renewcommand{\chaptermark}[1]{\markboth{##1}{}} % Getting the chapter name right
+	\rhead{\thepage} % Page number at the right of the header
+	\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the preamble pages
+}
+
+% DEDICATION
+\newcommand{\dedication}[1]{%
+    \null
+    \begin{flushright}
+        \slshape
+        \small
+        \vspace{4cm}
+        #1
+        \vfill
+    \end{flushright}
+    \thispagestyle{empty}%
+    \newpage
+}
+
+\RequirePackage{xkeyval} % Handling keyword options.
+
+\makeatletter
+\renewcommand*\cleardoublepage{%
+  \clearpage\if@twoside\ifodd\c@page\else
+  \null
+  \thispagestyle{empty}%
+  \newpage
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+% PACKAGES FOR IMAGES
+\usepackage{graphics, graphicx, transparent, setspace, tikz, float, color}
+\usepackage[
+    font=footnotesize,
+    labelfont=bf,
+    font=onehalfspacing]{caption}
+\graphicspath{{Images/}}
+
+% PACKAGES FOR HYPERLINK
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+    citecolor=black,
+}
+
+% STANDARD MATH PACKAGES
+\usepackage{mathtools, amsmath, amssymb, amsthm, bm, cases, calrsfs}
+\usepackage[overload]{empheq}  % For braced-style systems of equations
+
+% PACKAGES FOR TABLES
+\usepackage{tabularx, longtable, colortbl, makecell, boldline, pdflscape}
+
+% PACKAGES FOR REFERENCES & BIBLIOGRAPHY
+\usepackage[
+    backend=biber,
+    sorting=ynt
+    ]{biblatex}
+\usepackage[nottoc,numbib]{tocbibind}
+\addbibresource{00_bibliography/bibliography.bib}
+% You may use a different style adapted to your field
+% see https://it.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
+
+% PACKAGES FOR THE APPENDIX
+\usepackage{appendix}
+
+% PACKAGES FOR ITEMIZE & ENUMERATES 
+\usepackage{enumitem}
+
+% OTHER PACKAGES
+\usepackage{comment, tcolorbox}
+
+% DEFINIZIONI
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+
+%medium	\textmd{Sample Text 0123}
+%bold	\textbf{Sample Text 0123}
+%upright	\textup{Sample Text 0123}
+%italic	\textit{Sample Text 0123}
+%slanted	\textsl{Sample Text 0123}
+%small caps	\textsc{Sample Text 0123}
+
+% ENVIRONMENTS
+\newtheorem{myth}{Theorem}[section]
+\newtheorem{mydef}{Definition}[section]
+\newtheorem{myex}{Example}[section]
+\newtheorem{myoss}{Remark}[section]
+
+\newcommand{\teo}[2]
+{ \begin{myth}[#1] #2 \end{myth} }
+
+\newcommand{\deff}[2]
+{ \begin{mydef}[#1] #2 \end{mydef} }
+
+\newcommand{\ex}[2]
+{ \begin{myex}[#1] \small #2 \end{myex} }
+
+\newcommand{\oss}[2]
+{ \begin{myoss}[#1] \small #2 \end{myoss} }

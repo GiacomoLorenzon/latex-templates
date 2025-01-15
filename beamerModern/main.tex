@@ -1,0 +1,66 @@
+\documentclass{beamer}
+
+%\usetheme[bgphoto,nologo]{modern}
+%\usetheme{modern}
+\usetheme[nologo]{modern}
+
+\title{A Working Title}
+\subtitle{A (Hopefully) Working Subtitle}
+\author{Author Name}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+\begin{frame}{Table of contents}
+    \tableofcontents
+\end{frame}
+
+\section{Nuova sezione}
+\begin{frame}{Nuova slide}
+    Il testo della slide.
+    \begin{itemize}
+        \item Elenco puntato.
+        \begin{itemize}
+            \item Altro elenco puntato.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{Sottosezione}
+\begin{frame}{Nuova slide}
+    Il testo della slide.
+    \begin{itemize}
+        \item Elenco puntato.
+        \begin{itemize}
+            \item Altro elenco puntato.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[nonumber]
+    % Frame content goes here
+\end{frame}
+
+\begin{frame}[plain]
+    % Frame content goes here
+\end{frame}
+
+\begin{frame}{Altra slide}
+    \begin{block}{Blocco generico}
+        Testo.
+    \end{block}
+
+    \begin{alertblock}{Allerta}
+        Testo.
+    \end{alertblock}
+
+    \begin{exampleblock}{Esempio}
+        Testo.
+    \end{exampleblock}
+\end{frame}
+
+\end{document}

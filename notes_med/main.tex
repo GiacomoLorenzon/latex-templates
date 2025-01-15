@@ -1,0 +1,46 @@
+\documentclass[a4paper,10pt,twoside,titlepage]{book}
+\usepackage{settings}
+
+\begin{document}
+
+    \renewcommand{\title}{Fisiologia}
+    \newcommand{\subtitle}{Elettrofisiologia e Neurofisiologia}
+    \newcommand{\firstprofessor}{Andrea Moriondo}
+    \newcommand{\secondprofessor}{}
+    
+    \newcommand{\h}[1]{\textbf{#1}}
+    
+    \newcommand{\p}{\textsuperscript{+} }
+    \newcommand{\m}{\textsuperscript{--} }
+    
+    % initial notes
+    \newcommand{\initialNotes}
+    {
+        Note del corso dell'anno accademico 2023 -- 2024. Le note sono sintetiche, ma esaustive. Si basano su quanto detto dal professore a lezione con eventuali integrazioni dal testo, evidenziate laddove presenti. La prosa è schematica, ben scandita da punteggiatura, per facilitare la lettura, il processo logico e l'apprendimento.
+        
+        Le immagini sono prese in prestito dalle presentazioni del professore.
+        
+        A fine di ogni capitolo compare un riassunto con i concetti principali e talvolta uno schema.
+        
+        L'esame è scritto, con domande aperte. Il voto è in trentesimi, poi scalato sul punteggio del compito migliore della classe.
+    }
+    
+    % Main document
+    % title
+    \input{./chapters/title.tex}
+    % main body
+    \input{./chapters/initial_notes.tex}
+    \input{./chapters/elettrofisiologia.tex}
+    \input{./chapters/interazione_tra_le_cellule_nervose.tex}
+    \input{./chapters/sistemi_sensoriali.tex}
+    \input{./chapters/organizzazione del movimento.tex}
+    \input{./chapters/sonno.tex}
+    \input{./chapters/funzioni_corticali.tex}
+    \input{./chapters/memoria_e_apprendimento.tex}
+    \input{./chapters/sistema_nervoso_autonomo.tex}
+    % bibliography
+    \input{./bibliography/bibliography.tex}
+    % appendix
+    %\input{./chapters/appendix.tex}
+
+\end{document}

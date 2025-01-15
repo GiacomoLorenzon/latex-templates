@@ -1,0 +1,1115 @@
+\chapter{Introduzione}
+Lo scopo del corso è introdurre lo studente all'Elettrofisiologia, per poi condurlo verso la Neurofisiologia. Il funzionamento del sistema nervoso, infatti, si basa sul rapporto ben calibrato tra i suoi componenti e ciò che lo circonda. Ogni soggetto coinvolto nei processi neurologici può essere modellato come un piccolo sistema fisico, il cui funzionamento e i cui rapporti con l'esterno possono essere descritti da diverse leggi fisiche e chimiche, che verranno affrontate, principalmente attingendo dalle nozioni di correnti ioniche, concentrazioni ed equilibri di potenziale.
+
+\section{Nozioni introduttive}
+Prima di paralare di elettrofisiologia è opportuno comprendere che la natura delle correnti di cui parleremo è \h{ionica}. Dunque sarà importante sviscereare il concetto di \h{concentrazione} -- ionica e non -- e, per farlo, occorre prima analizzare i diversi \h{compartimenti corporei}: è infatti la diversa concentrazione di un soluto in due regioni spaziali differenti che risulta a noi interessante dal punto di vista della fisiologia.
+
+\subsection{Compartimenti corporei}
+Al fine dello studio dell'elttrofisiologia, è rilevante {suddividere} il nostro ambiente interno in questo modo:
+\begin{itemize}
+    \item \h{ambiente intracellulare};
+    \item \h{ambiente extracellulare}.
+\end{itemize}
+L'ambiente extracellulare può essere diviso in liquido interstiziale (fuori da vasi) e plasma (dentro ai vasi). Essi sono divisi dall'endotelio dei capillari ed hanno una composizione proteica differente. Tuttavia, la concentrazione ionica è la medesima e dunque non è rilevante distinguerli nello studio dell'elettrofisiologia. L'attenzione dunque sarà tutta rivolta verso gli scambi che avvengono a cavallo della \h{membrana plasmatica}, di appena 100 nm.
+
+\oss{Numeri di riferimento}{In fisiologia, per convenzione i valori prendono come soggetto di riferimento un mashio adulto di 70 Kg.}
+
+Il 60\% del peso di un uomo (42 Kg) è dovuto all'acqua, equivalenti a circa 42L. Di questi:
+\begin{itemize}
+    \item 14L è acqua extracellulare, di cui 10.5L interstiziale e 3.5L plasma;
+    \item 28L è acqua intracellulare.
+\end{itemize}
+
+\subsection{Concentrazione e legge della diluizione}
+Affrontiamo diversi concetti legati alle misure di soluto in soluzione.
+
+\subsubsection{Legge della diluizione}
+La concentrazione $C$ di un soluto, in quantità $Q$, disciolto in un solvente di volume $V$ è data da:
+\begin{equation*}
+    C = \frac{Q}{V}
+\end{equation*}
+In una \h{soluzione}, la concentrazione del soluto $C$ è \h{omogenea in spazio}, cioè rimane costante in ogni punto dello spazio. Si dice che è una \h{miscela omogenea}.
+
+\oss{Concentrazione e densità}{La densità si definisce come la quantità di soluto sul suo volume. La densità è invece la quantità di soluto sul volume di solvente in cui esso è disciolto.}
+
+\subsubsection{Concentrazione: alcune definizioni}
+Seguono alcune definizioni di concentrazione, che risulteranno utili ciascuna in un diverso contesto.
+
+\begin{description}
+    \item[Concentrazione molare] [M = mol / L] Si utilizza per i soluti indissociabili in un dato solvente.
+    \begin{equation*}
+    C_{MOL} = \frac{n_{soluto}}{V_{soluzione}}
+    \end{equation*}
+    Si noti che il volume fa riferimento alla soluzione, non al solvente.
+    
+    \item[Concentrazione osmolare] [osmoli / L]
+    Si utilizza per specie ioniche dissociabili.
+    \begin{equation*}
+    C_{OSMOLAR} = \frac{n_{osmoli}}{V_{soluzione}}
+    \end{equation*}
+    Dove il numero di osmoli indica in numero di moli di particelle -- dissociate e non -- presenti in soluzione. È per questo motivo che la concentrazione molare si usa spesso con molecole indissociabili in soluzione (es. glucosio e acqua), metre l'osmolarità è utile con specie ioniche dissociabili (es. NaCl e acqua). In quest'ultimo caso infatti 1 soluzione 1 molare di cloruro di sodio in acqua equivale a una soluzione 2 osmolare: una mole di NaCl, in acqua infatti dissocia in una mole di Na\p e una mole di Cl\m. È importante poiché l'acqua si sposta tra compartimenti nel nostro corpo ad opera della pressione osmotica, dovuta alla diversa concentrazione osmolare a carico di proteine (in piccola misura) e ioni.
+    
+    \oss{}{Se il soluto è indissociabile osmolarità e concentrazione molare coincidono.}
+    
+    \item[Concentrazione osmolale] [osmoli / Kg di H$_2$O]
+    \begin{equation*}
+        C_{OSMOLAL} = \frac{C_{OSMOLAR}}{1-f_P}
+    \end{equation*}
+    Dove $C_{OSMOLAL}$ è la concentrazione osmolale, $C_{OSMOLAR}$ è la concentrazione osmolare, $f_P$ è la frazione proteica in massa di tutto il soluto disciolto nel solvente. Segue dalla definizione che l'osmolalità è sempre maggiore o uguale alla osmolarità
+    \begin{equation*}
+        C_{OSMOLAL} \geq C_{OSMOLAR}.
+    \end{equation*}
+    
+    \item[Concentrazione equivalente] [equivalenti / L]
+    La concentrazione equivalente prende in considerazione le cariche elettriche complessive nella soluzione.
+    \begin{equation*}
+        C_E = \frac{n_E}{V_{soluzione}}
+    \end{equation*}
+    Dove $n_E$ è il numero di equivalenti, cioè il numero di moli di cariche elettriche intere. Per esempio, una soluzione 1M di NaCl è uno equivalente di cariche positive e uno equivalente di cariche negative; mentre una soluzione 1M di \el{Ca^{++}} è due equivalente di cariche positive.
+    
+    \oss{Differenza tra plasma e siero}{La differenza risiede nelle proteine in soluzione: nel plasma, facente parte del sangue, sono in sospensione ancora tutte le proteine della cascata coagulativa, mentre nel siero no. Dal punto di vista ionico sono identici. Si ricorda anche che il sangue è una sospensione, il plasma è una soluzione.}
+\end{description}
+
+\subsection{Pressione}
+La pressione è definita come la forza esercitata per unità di superficie. Si misura in Newton su metro quadro nel sistema internazionale ma, in fisiologia è più frequente incontrare le seguenti unità di misura:
+\begin{itemize}
+    \item atmosfera: 1 atm = 760 mmHg;
+    \item millimetri di mercurio: 1 mmHg = 1.356 cm \el{H_2O};
+    \item centimetri d'acqua: 1 cm \el{H_2O} = 10$^3$ dyne/cm$^2$;
+\end{itemize}
+sapendo che 1 atm equivale a 101325 Pa.
+
+\subsubsection{Pressione osmotica}
+La \h{pressione osmotica} è una proprietà colligativa delle soluzioni, ossia dipende dal numero di particelle di soluto piuttosto che dalla loro natura chimica. Si manifesta quando due soluzioni con concentrazioni diverse di soluto sono separate da una membrana semipermeabile, che permette il passaggio del solvente ma non del soluto.
+
+In questa situazione, il solvente tenderà a muoversi dalla soluzione a concentrazione inferiore (più diluita) verso quella a concentrazione maggiore (più concentrata) per cercare di equilibrare le concentrazioni da entrambe le parti della membrana e minimizzare l'entropia. La \h{pressione osmotica} è la pressione che deve essere applicata per contrastare questo flusso di solvente.
+
+La legge che descrive la pressione osmotica è l'equazione di Van't Hoff, che è analoga a quella dei gas ideali:
+
+\[
+\pi = iMRT
+\]
+
+Dove \( \pi \) è la pressione osmotica, \( i \) è il fattore di Van't Hoff (dipende dalla dissociazione del soluto), \( M \) è la molarità della soluzione, \( R \) è la costante universale dei gas, \( T \) è la temperatura assoluta in Kelvin. La pressione osmotica non si può misurare direttamente. Occore prima trasformarla in pressione idraulica con il procedimento appena descritto.
+
+\section{Valori notevoli}
+Qui si riportano numeri notevoli che è opportuno ricordare al fine della comprensione del seguito\footnote{e del superamento dell'esame.}.
+
+\subsection{Concentrazioni anioniche e cationiche}
+La \autoref{fig:soluti} mostra la differenza di composizione dei liquidi nei diversi compartimenti corporei. In ascissa troviamo i compartimenti: plasma, liquido interstiziale e intracellulare; in ordinata l'osmolalità. Ai fini della neurofisiologia, è possibile non distinguere plasma e liquido interstiziale, e quindi equipararli. Osserviamo allora la differenza tra liquido extracellulare e intracellulare.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/soluti.png}
+    \caption[Organizzazione dei liquidi corporei e degli elettroliti in compartimenti.]{
+        Organizzazione dei liquidi corporei e degli elettroliti in compartimenti.\\
+        A) I liquidi corporei sono suddivisi nei compartimenti liquidi intracellulare ed extracellulare (rispettivamente LIC e LEC). Il loro contributo percententuale al peso corporeo (basato sui valori di un giovane adulto sano; esistono piccole variazioni legate al genere ed all'età) mette in rilievo la prevalenza dei liquidi corporei nella costituzione del corpo. I liquidi transcellulari, che rappresentano una percentuale molto piccola dei liquidi totali, non sono mostrati. Le frecce rappresentano il movimento dei liquidi tra i compartimenti.\\
+        B) Elettroliti e proteine sono distribuiti in maniera non uniforme tra i liquidi del corpo. Questa distribuzione diseguale è cruciale per la fisio­logia. Prot-, proteine, che tendono ad avere una carica negativa a pH fisiologico.}
+    \label{fig:soluti}.
+\end{figure}
+
+\begin{itemize}
+    \item {liquido intracellulare}:
+    \begin{itemize}
+        \item potassio;
+        \item in misura minore: magnesio, fosfati, bicarbonati, proteine;
+        \item  in quantità minime: cloro e sodio.
+    \end{itemize}
+    \item {liquido extracellulare}:
+    \begin{itemize}
+        \item sodio, cloro;
+        \item in misura minore bicarbonati, glucosio e altri ioni.
+    \end{itemize}
+\end{itemize}
+
+La differenza totale tra i due compartimenti è di circa 300 mOsm/L. Questo equilibrio è mantenuto grazie a meccanismi attivi e passivi di filtraggio e separazione della membrana plasmatica. Seguono in \autoref{tab:cationi} nel dettagli le concentrazioni dei cationi, più rilevanti degli anioni nello studio dell'elettrofisiologia. Si noti come l'osmolalità totale è simile nei diversi compartimenti: questo permette di prevenire scambi di liquido dovuti ad un gradiente osmolale.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c | c | c | c }
+        \ & extrac. [mmol/L] & intrac. [mmol/L] & extrac. / intrac. \\
+        \hline
+        \el{Na^+} & $140\div150$ & $8\div12$ & $\approx$10 \\
+        \hline
+        \el{K^+} & 4 & $145\div155$ & $\approx$30 \\
+        \hline
+        \el{Ca^{++}} & 1.7 & $2\cdot 10^{-3}\div2$ & \  \\
+        \hline
+        \el{Mg^{++}} & (0.65) & (17) & \ \\
+        \hline
+        \el{Cl^{-}} & 118 & 4 & $\approx$30 \\
+        \hline
+        mOsm/L totale & 303.8 & 304 & \ \\
+    \end{tabular}
+    \caption[Concentrazioni cationiche nei compartimenti corporei.]{Concentrazioni cationiche nei compartimenti corporei.\\
+        - La concentrazione extracellulare del sodio è fissa. Uno squilibrio porta alla morte.\\
+        - Il cloro ha un ruolo più che altro metabolico. La concentrazione interna varia da un minimo nelle cellule a riposo a un massimo nel reticolo o nella membrana interna mitocondriale, dove si accumula. \\
+        - Il magnesio è importante come cofattore enzimatico a livello cellulare, non entra nei meccanismi elettrici.
+    }
+    \label{tab:cationi}
+\end{table}
+
+La pressione dei nostri liquidi corporei è dunque di circa 300 mOsm/L, che si traducono in 22.4 atm di pressione meccanica. Ciasuno dei 3 comparimenti ne esecita un terzo, pari a 6.7 atm o, equivalentemente, 5760 mmHg. È importante che essa sia uguale in tutti i compartimenti, come -- di seguito -- esemplifica il caso dell'emoglobina.
+
+
+\subsubsection{Globuli rossi e osmolalità}
+Il globulo rosso è un componente fondamentale del sangue. Esso contiene l'emoglobina, il nostro trasportatore dell'ossigeno, dai polmoni ai tessuti periferici. Il globulo rosso ha una peculiare forma biconcava, strettamente collegata alla sua funzionalità: se essa si altera, anche la sua capacità di legare l'ossigeno cambia. La \autoref{fig:gr} mostra un globulo rosso in soluzione, da sinistra a destra, ipertonica, isotonica e ipotonica. Nel primo caso, la pressione osmotica interna è maggiore rispetto a quella del plasma: di conseguenza il globulo rosso raggrinzisce poiché l'acqua è richiamata al suo esterno. Al contrario, in soluzione ipotonica, l'acqua entra nel globulo rosso che, gonfiandosi, si lacera. Questo processo è definito \h{emolisi}. Entrambi i casi estremi possono portare a forme di anemia e quindi incompatibilità con la vita.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/gr.png}
+    \caption{Globulo rosso in soluzione ipertonica, isotonica e ipotonica.}
+    \label{fig:gr}.
+\end{figure}
+
+Il grafico in \autoref{fig:gr2} ribadisce quanto espresso. Si può però in più notare che il margine di sicurezza in soluzione ipotonica è più basso rispetto ad una soluzione ipertonica, e quindi più pericolo.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/gr2.png}
+    \caption{Rapporto volumetrico di un globulo rosso in soluzione iper/iso/ipo-tonica rispetto a una condizione di normalità.}
+    \label{fig:gr2}.
+\end{figure}
+
+\subsection{Soluzioni iso-osmotiche e iso-toniche}
+Nel caso in cui si voglia trattare un tessuto esposto è importante non utilizzare acqua distillata poiché, dal punto di vista dell'osmolarità, può rappresentare un forte shock per la mucosa. Per mantere quindi una condizione fisiologica è opportuno utilizzare invece una soluzione iso-osmotica, o altrimenti detta \h{soluzione fisiologica}, che abbia come pressione osmolare 300mOsm/L.
+
+\ex{Soluzione fisiologica}{Sciogliendo 9g di \el{NaCl} in 1L di acqua si ottiene una soluzione fisiologica.}
+
+La soluzione fisiologica però non è in grado di sostenere per tempi lunghi la funzionalità cellulare, in quanto non garantisce il corretto apporto di ioni. Si ricorre allora alle soluzioni iso-toniche, che mantengono come la fisiologica il volume cellulare, ma ne supportano anche il metabolismo. Esistono principalmente due tipologie: la soluzione di \h{Ringer} e di \h{Tyrode}.
+
+\subsubsection{Soluzione isotonica di Ringer}
+All'interno contiene NaCl, altri ioni e sistemi tampone. Manca però di un substrato energeticamente disponibile, come il glucosio. Perciò, pur mantenendo per un breve periodo di tempo -- nell'ordine dell'ora -- il metabolismo cellulare, non è in grado di sostenerlo per periodi lunghi.
+
+\subsubsection{Soluzione isotonica di Tyrode}
+Dal punto di vista ionico è molto simile alla soluzione Ringer. In aggiunta, troviamo magnesio e glucosio, che consente ai tessuti di estrarre energia tramite il metabolismo e conseguentemente produrre ATP, mantenendone la vitalità. Si rende particolarmente utile nei trapianti, per mantere in vita gli organi.
+
+\riassunto{2}{
+    La fisiologia ionica studia il movimento e la distribuzione degli ioni tra i compartimenti intracellulari ed extracellulari, con particolare attenzione alle differenze di concentrazione e ai gradienti elettrochimici. I principali ioni coinvolti sono \(\text{Na}^+\), \(\text{K}^+\), \(\text{Ca}^{++}\), \(\text{Cl}^-\), ciascuno con una distribuzione specifica tra interno ed esterno della cellula.
+    
+    \begin{tabular}{c | c | c }
+        \ & e [mmol/L] & i [mmol/L] \\
+        \hline
+        \el{Na^+} & $140\div150$ & $8\div12$ \\
+        \hline
+        \el{K^+} & 4 & $145\div155$ \\
+        \hline
+        \el{Ca^{++}} & 1.7 & $2\cdot 10^{-3}\div2$  \\
+        \hline
+        \el{Mg^{++}} & (0.65) & (17) \\
+        \hline
+        \el{Cl^{-}} & 118 & 4 \\
+        \hline
+        tot & 303.8 & 304 \\
+    \end{tabular}
+    
+    \textbf{Compartimenti corporei}: La cellula è immersa in un ambiente extracellulare (plasma e liquido interstiziale), separato dall'ambiente intracellulare da una membrana plasmatica.\\
+    
+    \textbf{Concentrazioni ioniche}: Nel compartimento extracellulare prevalgono sodio (\(\text{Na}^+\)) e cloro (\(\text{Cl}^-\)), mentre l'intracellulare è dominato dal potassio (\(\text{K}^+\)). La differenza di concentrazione ionica crea potenziali elettrici e osmolarità.\\
+    
+    \textbf{Pressione osmotica}: La differenza di concentrazione tra i compartimenti induce flussi di acqua, regolati dalla pressione osmotica, che dipende dal numero di particelle disciolte.\\
+    
+    \textbf{Equazioni di concentrazione}:
+    \textbf{Concentrazione molare} (M = mol/L): \( C_{MOL} = \frac{n_{soluto}}{V_{soluzione}} \).\\
+    \textbf{Concentrazione osmolare} (osm/L): \( C_{OSMOLAR} = \frac{n_{osmoli}}{V_{soluzione}} \).\\
+    \textbf{Concentrazione osmolale} (osm/Kg): \( C_{OSMOLAL} = \frac{C_{OSMOLAR}}{1 - f_P} \), dove \(f_P\) è la frazione proteica in massa.\\
+    \textbf{Concentrazione equivalente} (Eq/L): \( C_E = \frac{n_E}{V_{soluzione}} \), dove \(n_E\) è il numero di moli di cariche elettriche.\\
+    
+    \textbf{Soluzioni fisiologiche}: Le soluzioni iso-osmotiche (300 mOsm/L) e isotoniche (Ringer, Tyrode) vengono usate per mantenere le condizioni vitali cellulari e prevenire danni osmotici, come l'emolisi dei globuli rossi.\\
+    
+    In sintesi, la regolazione delle concentrazioni ioniche è fondamentale per mantenere il volume cellulare, il potenziale di membrana e la fisiologia generale delle cellule. L'equilibrio osmotico e la distribuzione dei soluti sono strettamente correlati alla funzione cellulare.
+}
+
+\chapter{Elettrofisiologia}
+L'elettrofisiologia sarà trattata facendo riferimento sempre al neurone. Tuttavia, è possibile estendere i discorsi che seguiranno a tutte le cellule eccitabili dal punto di vista elettrico, come le cellule lisce, le ghiandolari, e le striate scheletriche.
+
+\section{Il potenziale di riposo}
+Tutte le cellule eccitabili elettricamente presentano due stati fondamentali: uno di eccitazione e uno di riposo. Questi stati possono essere distinti attraverso un semplice esperimento. Si immagini di immergere un neurone in una soluzione fisiologica all'interno di un contenitore (\autoref{fig:ddp}). Successivamente, si posiziona un elettrodo nella soluzione e un altro a diretto contatto con il neurone. Collegando entrambi gli elettrodi a un voltmetro, sarà possibile misurare la differenza di potenziale tra l'interno e l'esterno della cellula, permettendo così di registrare il passaggio tra lo stato di riposo e quello di eccitazione.
+
+\sidefigure{img/ddp}{Esperimento per la misura della d.d.p. tra fisiologica e neurone.}{ddp}
+
+Allo stato di riposo si registra una differenza di potenziale (d.d.p.) di -70mV. Ciò significa che la differenza del potenziale elettrico tra l'interno del neurone e l'esterno è -- in valore assoluto -- di 70mV. Dunque l'interno è ``più negativo'' rispetto all'esterno a cui, per convenzione, viene attribuito il valore assoluto di 0mV.
+
+\oss{}{Ciò che interessa è la \h{differenza} di potenziale, non tanto il suo valore assoluto. Si vedrà in seguito che è questo che genera uno spostamento di cariche, e quindi una corrente.}
+
+Il mantenimento della differenza di potenziale è reso possibile grazie alla selettiva permeabilità della membrana agli ioni. In particolare, grazie a pioneristici studi basati sull'utilizzo di isotopi radioattivi, si è compreso che in condizioni di riposo la membrana è
+\begin{itemize}
+    \item molto permeabile a \el{K^+};
+    \item molto permeabile a \el{Cl^{-}};
+    \item poco permeabile a \el{Na}.
+\end{itemize}
+
+\section{Ioni e leggi fisiche}
+Si vedono nel seguito le leggi fisiche che descrivono lo spostamento degli ioni, e dunque le correnti elettriche, attraverso la membrana cellulare.
+
+Si consideri il seguente problema. In un cilindro, con sezione circolare $A$ è presente acqua distillata, separata da una soluzione con concentrazione nota. Si vuole determinare il flusso del soluto attraverso la sezione del cilindro di spessore infinitesimo $\mathrm{d}x$, evidenziata in rosso in \autoref{fig:cil}.
+
+\sidefigure{img/cil}{Flusso ionico.}{cil}
+
+La \h{legge generale dei flussi} stabilisce che il flusso $J$ è pari al prodotto della forza coniugata al flusso $X$ per un coefficiente moltiplicativo $L$. In formula:
+\begin{equation}
+    \label{eq:lgf}
+     J = L X
+\end{equation}
+Il flusso $J$ attraverso la sezione in rosso è anche quantificabile come la quantità di materia $\mathrm{d}n$ che lo attraversa nell'unità di tempo $\mathrm{d}t$.
+\begin{equation*}
+    J = \frac{\mathrm{d}n}{\mathrm{d}t}.
+\end{equation*}
+La quantità di soluto $\mathrm{d}n$ disciolta nel volumetto rosso è altresì esprimibile come il prodotto della sua concentrazione nella soluzione $c$ e il volume stesso $A dx$, dato dal prodott della sezione $A$ e il suo spessore $\mathrm{d}x$. In formula: $\mathrm{d}n = c A \mathrm{d}x$. Segue:
+\begin{equation*}
+    J = \frac{\mathrm{d}n}{\mathrm{d}t} = cA\frac{\mathrm{d}x}{\mathrm{d}t}.
+\end{equation*}
+Si osservi che la quantità $\mathrm{d}x/\mathrm{d}t$ è, dal punto di vista dimensionale, una velocità. È infatti lo spessore infinitesimale della sezione considerata fratto l'unità di tempo. Si consideri ora il caso stazionario, la situazione cioè in cui la velocità non varia nel tempo ma rimane costante. Si consideri inoltre non il flusso istantaneo, ma mediato nel tempo, in quanto non siamo interessati a piccole oscillazioni stocastiche. Il flusso medio, che indichiamo sempre come $J$, dipende allora dalla velocità di spostamento media $v$ del soluto:
+\begin{equation}
+    \label{eq:J}
+    J = cAv.
+\end{equation}
+All'equilibrio, la velocità è costante, dunque l'accelerazione nulla e così anche la risultante delle forze. Le forze in gioco sono principalmente due: una che sostiene il flusso -- \h{la forza coniugata al flusso $X$} --, e una che lo ostacola -- \h{la forza di attrito $R$}. Dunque $R = X$. La forza di attrito è esprimibile nel seguente modo:
+\begin{equation*}
+    R = n f v,
+\end{equation*}
+dove $n$ è il numero di ioni che attraversano la sezione considerata nell'unità di tempo, $f$ è il coefficiente di Stokes per sezione cilindrica, $v$ è la velocità media con cui gli ioni attraversano la sezione. Possiamo così esprimere la velocità media in funzione di $R$, $n$ e $f$ e, in condizioni di equilibrio, di $X = R$.
+
+\oss{}{Si noti che $X$ e $v$ non sono misurabili e quindi è necessario fare queste sostituzioni per trattare quantità invece verificabili tramite esperimenti.}
+
+Sostituendo nell'\autoref{eq:J} otteniamo:
+\begin{equation*}
+    J = c A \frac{R}{n f} = c A U R
+\end{equation*}
+Il coefficiente $U = 1 / nf $ è il \h{coefficiente di mobilità ionica}, indice della capacità dello ione di attraversare la membrana plasmatica. Maggiore è $U$, maggiore è la sua capacità di attraversarla.
+
+\subsection{Legge di Toerell}
+Si è arrivati dunque alla \h{legge di Toerell}.
+\begin{equation}
+    \label{eq:toerell}
+    \boxed{
+    J/A = c U X
+    }
+\end{equation}
+Essa esprime il flusso di una specie ionica $J$ per unità di superficie $A$, ed è pari al prodotto della sua concentrazione nell'ambiente di partenza $c$, il suo coefficiente di mobilità ionica $U$ e la forza coniugata al flusso $X$ o, in equilibrio equivalentemente alla forza di attrito $R$. Il flusso è dunque proporzionale alla concentrazione dell’ambiente di partenza, quindi il flusso non è necessariamente unidirezionale e pertanto sono ammessi anche flussi contro gradiente di concentrazione.
+
+\oss{Flusso netto}{Il flusso netto è dato dalla somma algebrica dei flussi di diverse specie chimiceh, ciasuno descritto dalla legge di Toerell. Il flusso netto è unidirezionale, ma ciascuna specie può avere un verso diverso di diffusione, in funzione della sua concentrazione iniziale, del suo coefficiente $U$ e di $X$.}
+
+\oss{Unità di misura}{Nel seguito, tutti i flussi sono indicati per unità di superficie, anche se non esplicitato.}
+
+\subsection{Potenziale elettrico}
+Il fenomeno che stiamo analizzando è reso possibile grazie ad un contributo energetico. In particolare, l'energia posseduta da ogni ione è energia di tipo elettrochimico. Essa si può esprimere nel seguente modo:
+\begin{equation}
+    \label{eq:mu}
+    W = \mu = \mu_0 + RT \ln{c} + zFV,
+\end{equation}
+dove il primo addendo è la costante del potenziale chimico standard, $RT \ln{c}$ è l'energia potenziale chimica, e il terzo l'energia potenziale elettrica. In particolare, $R$ è la costante dei gas perfetti, $T$ la temperatura assoluta, $c$ la concentrazione dello ione, $z$ la sua valenza, $F$ la costante di Faraday, $V$ il potenziale elettrochimico.
+
+Richiamiamo la legge generale dei flussi in \autoref{eq:lgf}. Dato che l'energia elettrochimica è di tipo potenziale, la forza ad essa associata è conservativa, e dunque può essere espressa come meno il suo gradiente. In formula
+\begin{equation}
+    \label{eq:W}
+    X = -\nabla W = -\frac{\mathrm{d}W}{\mathrm{d}x}.
+\end{equation}
+Il segno meno è una convenzione e sta ad indicare che la forza generata dal gradiente di potenziale ha verso opposto.
+\oss{Gradiente}{Euristicamente, il gradiente appena espresso rappresenta la variazione  di energia nell'unità di spazio. Dunque, nel caso concreto degli ioni esaminato, la differenza di potenziale di 70mV si traduce in un campo elettrico di 70 MV/m, ovvero 70 mV diviso lo spessore della membrana, pari a $10^{-9}$m: un campo elettrico enorme, in grado di generare in pochi millisecondi fenomeni elettrici imponenti.}
+
+\subsection{Equazione di Nernst-Planck}
+Sostituendo nell'\autoref{eq:W} la definizione di $W$ in \autoref{eq:mu}, si ottiene:
+\begin{equation*}
+    X = - \frac{\mathrm{d}(\mu_0 + RT \ln{c} + zFV)}{\mathrm{d}x} = - \left( \frac{RT}{c} \frac{\mathrm{d}c}{\mathrm{d}x} + zF \frac{\mathrm{d}V}{\mathrm{d}x} \right)
+\end{equation*}
+Si osservi che $\mu_0$ è una costante in spazio, dunque la sua derivata in spazio è nulla. Definiamo ora il \h{coefficiente di diffusione} $D = U RT$ e sostituiamo nell'equazione precedente.
+\begin{equation*}
+    X = - D \left( \frac{1}{U c} \frac{\mathrm{d}c}{\mathrm{d}x} +\frac{zF}{URT} \frac{\mathrm{d}V}{\mathrm{d}x} \right)
+\end{equation*}
+Ora sfruttiamo la legge di Toerell (\autoref{eq:toerell}), ricavando così l'\h{equazione di Nernst-Planck}.
+\begin{equation}
+    \label{eq:np}
+    \boxed{J / A = - D \left( \frac{\mathrm{d}c}{\mathrm{d}x} +c \frac{z F}{RT} \frac{\mathrm{d}V}{\mathrm{d}x}  \right)}
+\end{equation}
+Da essa possiamo dedurre che esiste un flusso di ioni tutte le volte che esiste un gradiente chimico o elettrico. A sua volta, esiste una differenza di potenziale o un gradiente chimico quando esiste un flusso di elettroni. In altre parole, i due fenomeni -- alla sinistra e alla destra dell'uguale -- si equivalgono e bilanciano.
+
+\subsection{Equazione di Henderson}
+Il discorso fino ad ora affrontato vale per ogni singola specie chimica in grado di attraversare la membrana plasmatica. In una soluzione con, per esempio, più tipologie di ioni, occorre considerare i contributi di ciascuna specie, ognuno con la sua concentrazione iniziale $c_i$ e il suo coefficiente diffusionale $D_i$. Ogni ione infatti ha la sua \h{mobilità elettroforetica}. Infatti, a parità di carica, diversi ioni hanno diversa \h{densità di carica}, poiché diverso è il loro raggio atomico.
+\oss{Raggio ionico}{La densità di cacrica aumenta al diminuire del raggio. In \autoref{fig:ionic} sono raffigurati ioni monovalenti con raggio crescente. La linea tratteggiata quantifica graficamente la densità di carica, massima per il litio, minima per il cesio.}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{ionic.png}
+    \caption{Raggio ionico per diverse specie chimiche.}
+    \label{fig:ionic}
+\end{figure}
+Di conseguenza, è diversa anche la loro capacità di attirare molecole d'acqua. Queste, legandosi allo ione formano un \h{alone di solvatazione}, che ostacola la diffusione dello ione attraverso la membrana.
+
+Se allora in una soluzione è presente per esempio un sale, è noto che questo dissocia. Prendiamo come riferimento \chemfig{NaCl}. In soluzione acquosa otteniamo due specie ioniche differenti: \chemfig{Na^+} e \chemfig{Cl^{-}}, con due diverse mobilità elettroforetiche, $u_{Na}=u^+$ e $u_{Cl}=u^-$. Senza entrare nei dettagli\footnote{perchè non sono noti e in letteratura non compaiono da nessuna parte.}, il campo elettrico $V$ generato dalla diversa e contemporanea diffusione dei due ioni, è data dall'\h{equazione di Henderson}\footnote{Non è dato sapere chi è cosa. L'autore dubita anche dell'attribuzione di questa equazione ad Henderson.}, una soluzione particolare dell'equazione di Nernst-Planck (\ref{eq:np}).
+\begin{equation*}
+    \boxed{
+        V = \frac{u^+-u^-}{u^++u^-}\frac{RT}{zF}\ln{\frac{c_1}{c_2}},
+    }
+\end{equation*}
+con $u = UFz$  mobilità elettroforetica. Si dice dunque che il potenziale elettrico generato è di \h{tipo diffusionale}, cioè esiste se c'è una coppia di ioni che diffonde e dunque sia l'anione sia il catione sono in grado di attraversare la membrana. La diversa velocità di attraversamento crea una separazione di carica e quindi la differenza di potenziale a cavallo della membrana.
+
+Sostituendo valori numerici delle concentrazione ioniche extra ed intracellulari, tuttavia, non si ottiene la differenza di potenziale di -70mV osservata. Ciò significa che l'equazione appena discussa è inadatta a descrivere il fenomeno studiato. In particolare, se l'equazione di Nernst-Planck (\autoref{eq:np}) deriva da principi primi -- e dunque deve essere corretta -- può essere sbagliata la successiva l'ipotesi di potenziale diffusionale. È ragionevole allora chiedersi se il potenziale di -70mV che si osserva sia un potenziale di equilibrio, che giustificherebbe anche la stabilità nel tempo del potenziale di membrana.
+
+\subsection{Potenziale di equilibrio di Nernst}
+Partendo nuovamente dall'equazione di Nernst-Planck (\autoref{eq:np}), per una certa specie ionica assumiamo di raggiungere un equilibrio, cioè uno stato in cui il flusso netto è nullo. In altri termini $J=0$. Questo accade nel momento in cui lo spostamento degli ioni dovuto al gradiente chimico è bilanciato da quello causato dal campo elettrico, che gli stessi ioni generano, in quanto carichi. In formula:
+\begin{equation*}
+    J = 0 \implies -  \frac{\mathrm{d}c}{\mathrm{d}x} = c \frac{z F}{RT} \frac{\mathrm{d}V}{\mathrm{d}x}
+\end{equation*}
+Integrando la precedente espressione si ottiene l'\h{l'equazione di Nernst}.
+\begin{equation}
+    \label{eq:n}
+    \boxed{
+    V =  \frac{RT}{zF} \ln{\frac{c_1}{c_2}}
+    }
+\end{equation}
+Si osservi che l'integrazione vale in condizioni isoterme, cioé per $T$ costante lungo tutto il processo.
+
+\subsection{Equilibrio di Donnan}
+Si immagini un contenitore con una soluzione di \chemfig{KCl} 100 mM e un'altra soluzione \chemfig{KPr} alla stessa concentrazione, separate da una membrana permeabile agli ioni, ma non alle proteine (\chemfig{Pr^{-}}). L'impossibilità delle proteine di attraversare il setto crea uno squilibrio chimico e quindi elettrico. Infatti, gli ioni \chemfig{K^+} inizialmente sono in equilibrio, poiché presenti in concentrazioni uguali in entrabi gli scompartimenti; tuttavia, gli ioni \chemfig{Cl^{-}} diffondono attraverso la membrana per gradiente di concentrazione e, così facendo, generano un campo elettrico che muove anche gli ioni \chemfig{K^+}.
+
+\oss{}{Si osservi che la situazione appena descritta non è lontana dalle condizioni fisiologiche in cui si trova la cellula, nella quale la concentrazione interna di proteine è molto elevata rispetto a quella esterna.}
+
+In un tempo sufficientemente lungo, in cui cioé il transitorio è esaurito, otterremo una situazione di equilibrio, nella quale il potenziale di membrana $zFV$ sarà identico a quello di tutte le specie ioniche $i$-esime che la attraversano. Dunque nel nostro esempio:
+\begin{equation*}
+    zFV = 
+    \begin{cases}
+        z_{K^+}FV_{K^+} = RT \ln{\displaystyle\frac{[K^+]_1}{[K^+]_2}} \\
+        z_{Cl^-}FV_{Cl^-} = RT \ln{\displaystyle\frac{[Cl^-]_1}{[Cl^-]_2}}
+    \end{cases}
+\end{equation*}
+Sapendo che $z_{Cl^-} = -1$ e $z_{K^+}=+1$, uguagliando i termini e semplificando, si ottiene:
+\begin{equation*}
+    \frac{[K^+]_1}{[K^+]_2} = \frac{[Cl^-]_2}{[Cl^-]_1} = r_D
+\end{equation*}
+All'equilibrio dunque il rapporto le concentrazioni di ciascuno ione nei due scompartimenti è costante, ed è pari al valore $r_D$, cioé il \h{rapporto di Donnan}.
+
+Tuttavia, anche in questo caso, il modello è eccessivamente semplificatorio in quanto non descrive correttamente la realtà fisiologica. Si faccia riferimento alla \autoref{tab:don}, dove il pedice $ex$ (extracellulare) equivale a $1$ più sopra. Si osservi in particolare come $r_D$ non sia costante, per esempio, per KCl. Allo stessso modo, nessun potenziale elettrico $V$ riproduce i -70mV osservati nel neurone nell'esperimento descritto all'inizio di questa discussione.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ | c | c | c | c | c |}
+        \hline
+        \       & [c$_{in}$] mmol/L & [c$_{ex}$]  mmol/L& $r_D$   & $V$ mV \\
+        \hline
+        Na$^+$   & 145 & 10 & 14.5 & 66 \\
+        \hline
+        K$^+$   & 4 & 155 & 38.75 & -97 \\
+        \hline
+        Cl$^-$   & 118 & 10 & 11.8 & -90 \\
+        \hline
+    \end{tabular}
+    \caption{Rapporto di Donnan e potenziale di Nernst per Na, K, Cl a 37°C.}
+    \label{tab:don}
+\end{table}
+
+\subsection{Equilibrio di Goldman-Hodgkin-Katz}
+I modelli proposti fino ad ora tentavano di spiegare il potenziale di membrana facendo riferimento ad una sola specie ionica che, per motivi storici, è stata quella del potassio. Questo ha infatti un ruolo predominante nel tessuto muscolare, principale e forse unico tessuto studiato inizialmente dai fisiologi.
+
+Un eseprimento condotto da Hodgkin e Katz su un assone di calamaro dimostrò empiricamente l'inadeguatezza del modello di Nerst per basse concentrazioni di potassio (\autoref{fig:ghk}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{ghk.png}
+    \caption{Evidenza empirica dell'inadeguatezza della legge di Nernst.}
+    \label{fig:ghk}
+\end{figure}
+
+L'equazione di Goldman-Hodgkin-Katz (GHK) descrive il potenziale di membrana in una cellula tenendo conto della permeabilità della membrana a più ioni. Questa equazione è dunque un'estensione dell'equazione di Nernst, che considera invece un singolo tipo di ione.
+
+Nelle cellule, il potenziale di membrana è il risultato della distribuzione diseguale di ioni come sodio (\( \text{Na}^+ \)), potassio (\( \text{K}^+ \)) e cloro (\( \text{Cl}^- \)) tra l'interno e l'esterno della cellula. La membrana cellulare è selettivamente permeabile, permettendo il passaggio di certi ioni più facilmente di altri. L'equazione GHK tiene conto di questa permeabilità differenziale per calcolare il potenziale di membrana a riposo.
+
+L'\h{equazione di Goldman-Hodgkin-Katz} per il potenziale di membrana (\( V_m \)) è data da:
+
+\[
+\boxed{
+V_m = \frac{RT}{F} \ln \left( \frac{P_{\text{K}^+}[\text{K}^+]_\text{ext} + P_{\text{Na}^+}[\text{Na}^+]_\text{{ext}} + P_{\text{Cl}^-}[\text{Cl}^-]_\text{in}}{P_{\text{K}^+}[\text{K}^+]_\text{in} + P_{\text{Na}^+}[\text{Na}^+]_\text{in} + P_{\text{Cl}^-}[\text{Cl}^-]_\text{ext}} \right)
+}
+\]
+
+dove:
+\begin{itemize}
+    \item \( V_m \) è il potenziale di membrana,
+    \item \( R \) è la costante universale dei gas (8,314 J/mol K),
+    \item \( T \) è la temperatura assoluta (in Kelvin),
+    \item \( F \) è la costante di Faraday (96485 C/mol),
+    \item \( P_{\text{K}^+} = 1 \), \( P_{\text{Na}^+} = 0.013 \), \( P_{\text{Cl}^-} = 2\) sono le permeabilità della membrana per i rispettivi ioni,
+    \item \( [\cdot^+]_\text{in} \) e \( [\cdot^+]_\text{{ext}} \) sono le concentrazioni dello ione all'interno e all'esterno della cellula.
+\end{itemize}
+
+\subsubsection{Disequilibrio stazionario}
+In un contesto biologico, le cellule vivono in uno stato di disequilibrio stazionario in termini di distribuzione ionica tra l'interno e l'esterno della membrana cellulare. Questo significa che nonostante vi siano gradienti ionici, la cellula mantiene una condizione stabile nel tempo grazie a meccanismi attivi, presupponendo un utilizzo di energia esterna.
+
+Il sistema è dunque ``stazionario'' perché, nonostante i gradienti ionici e i flussi continui attraverso la membrana, le concentrazioni e il potenziale di membrana si mantengono costanti grazie all'azione della pompe ioniche e alle caratteristiche della membrana. Tuttavia, è un ``disequilibrio'' perché, in assenza di energia (ad esempio, se la pompa sodio-potassio smettesse di funzionare), il sistema andrebbe verso un equilibrio passivo, e il potenziale di membrana si avvicinerebbe al valore di equilibrio di Nernst per i singoli ioni.
+
+\section{Trasporto di ioni}
+Le cellule, in particolare i neuroni, mantengono un potenziale di membrana a riposo che non corrisponde a un equilibrio ionico, ma piuttosto a uno stato stazionario dinamico. Questo è possibile grazie a processi attivi, come l'azione della pompa sodio-potassio -- e altri trasporti attivi secondari -- che spende energia (ATP) per trasportare attivamente ioni contro i loro gradienti di concentrazione.
+
+\subsection{Pompa sodio-potassio}
+Il potenziale di equilibrio di Nernst di ogni specie ionica è quel potenziale elettrico di membrana per cui il suo flusso netto è nullo. A 37°C si ricordano i valori $V_K= -97$mV, $V_{Na} = 66$mV, $V_{Cl} = -90$mV.
+
+A -70mV si osserva dunque un flusso netto entrante nel neurone di sodio e cloro, e uscente di potassio e dunque:
+\sidefigure{pnacl}{Pompa Na/K}{pnacl}
+\begin{itemize}
+    \item una corrente positiva (sodio) entrante,
+    \item una positiva (potassio) uscente,
+    \item un'altra negativa (cloro) entrante che equivale ad una positiva uscente.
+\end{itemize}
+All'equilibrio dinamico, la somma delle correnti deve essere nulla. Ecco che allora entra in gioco la pompa sodio potassio (\autoref{fig:pnacl}), la quale genera una corrente positiva uscente.
+
+Essa è infatti un enzima di membrana, una ATPasi -- cioé che idrolizza ATP, che ha lo scopo di espellere 3 ioni $K^+$ dall'interno della cellula, in cambio di 2 ioni $Na^+$. Lo sbilanciamento stechiometrico, è la causa della, seppur debole, corrente positiva uscente. L'ATP si rende necessario perchè lo spostamento degli ioni avviene contro gradiente chimico. In questo modo, il potenziale degli ioni è mantenuto lontano da quello di equilibrio, consentendo così di rimanere al disequilibrio stazionario prima descritto.
+
+\oss{Trasporto attivo primario}{La pompa Na/Cl svolge un trasporto attivo primario, cioé spende ATP (attivo) e l'enzima che idrolizza ATP ed effettua il trasporto è il medesimo (primario).}
+
+\subsection{Trasporto del cloro}
+Il trasporto del cloro può essere descritto come un tipo di trasporto attivo secondario. Il termine “secondario” è utilizzato in quanto la proteina che idrolizza l’ATP è distinta da quella che effettua il trasporto stesso. In particolare, questi trasportatori sfruttano i gradienti elettrochimici di sodio e potassio, i quali sono mantenuti stabili e lontani dai loro valori di equilibrio dalle pompe sodio-potassio. Se il sistema fosse in equilibrio, non sarebbe possibile sfruttare questo tipo di trasporto; pertanto, una condizione di disequilibrio stazionario è un “male” necessario per poter utilizzare l’energia conservata nei gradienti elettrochimici degli ioni.
+
+Esistono due trasportatori principali per il cloro: il cotrasportatore NKCC e il trasportatore Cl-K. 
+
+\subsubsection{NKCC}
+Il cotrasportatore NKCC deve il suo nome alla stechiometria del trasporto, che è di 1 Na, 1 K e 2 Cl. Due geni codificano per questo trasportatore, portando alla sintesi delle isoforme NKCC1 e NKCC2. Sebbene entrambi i tipi di NKCC siano presenti nel nostro corpo, non si trovano nelle cellule nervose ma piuttosto a livello renale, negli epiteli di assorbimento e nelle ghiandole sudoripare. A livello nervoso, l’NKCC è presente nel feto, mentre negli adulti è presente l’altro trasportatore, Cl-K. 
+
+Nel feto, l’NKCC trasporta cloro e potassio all’interno della cellula; al contrario, nell’adulto, il trasportatore Cl-K espelle il cloro fuori dalla cellula. Questa differenza nella concentrazione di cloro tra il feto e l’adulto comporta un potenziale di equilibrio del cloro diverso: nel feto, la concentrazione di cloro è più alta, portando a un potenziale di equilibrio più elevato rispetto al potenziale di riposo della cellula. Nell’adulto, il potenziale di equilibrio del cloro è di circa -90 mV, inferiore al potenziale di riposo della cellula (-70 mV). Nel feto, grazie al gradiente elettrochimico del sodio, l’NKCC aumenta la concentrazione intracellulare di cloro e potassio, mentre nella madre adulta la situazione è opposta, con \( V_{Cl} < V_m \).
+
+\subsubsection{Implicazioni Cliniche}
+
+La rilevanza clinica di questo fenomeno risiede nel fatto che diversi psicofarmaci influenzano le conduttanze del cloro, alterando le correnti di cloro in risposta a specifici neurotrasmettitori e contribuendo alla normalizzazione di stati di ansia o depressione. Tuttavia, se tali farmaci vengono prescritti a donne in gravidanza, è fondamentale considerare che madre e feto presentano potenziali di equilibrio del cloro differenti. In tal caso, l’effetto del farmaco sul sistema nervoso fetale potrebbe essere opposto rispetto a quello osservato nella madre. Pertanto, è necessario valutare attentamente se il farmaco possa attraversare la placenta e gli effetti potenziali sul sistema nervoso in sviluppo del feto.
+
+Inoltre, la presenza di NKCC fetale nel sistema nervoso adulto, con conseguente potenziale di equilibrio del cloro alterato, è stata associata a patologie come l’epilessia e il dolore cronico, caratterizzate da un’ipereccitabilità neuronale dovuta all’aumento dell’importanza del cloro nel determinare il potenziale di membrana a riposo. Questa ipereccitabilità è tipica del feto, in quanto il suo sistema nervoso in sviluppo richiede una maggiore attività.
+
+\section{Modificazione del Potenziale di Membrana}
+Secondo la legge di Goldman, un neurone può modificare il suo potenziale di membrana agendo su concentrazioni ioniche, permeabilità o entrambi. Tuttavia, nella pratica, i neuroni non possono cambiare significativamente le concentrazioni ioniche (questo avviene solo in tempi molto lunghi e a livello intracellulare). Possono invece variare le permeabilità attraverso la regolazione dei canali ionici per sodio, cloro e potassio.
+
+Il potenziale di membrana è influenzato dalle permeabilità relative degli ioni e dai loro potenziali di equilibrio. L'effetto sul potenziale di membrana è maggiore quando si agisce su ioni con alta permeabilità, come il potassio (P$_{K}$ = 1) e il cloro (P$_{Cl}$ = 2), mentre il sodio (P$_{Na}$ = 0.013) ha un impatto minore. Di conseguenza, mantenere costante la concentrazione extracellulare di potassio è più cruciale rispetto a quella di sodio.
+
+La legge di Goldman suggerisce che il potenziale di membrana si avvicina al potenziale di equilibrio dello ione più permeabile. Per rendere il potenziale di membrana più negativo, un neurone può aumentare la permeabilità per potassio e cloro, o ridurre quella per il sodio. Al contrario, per aumentare il potenziale di membrana, può ridurre la permeabilità per potassio e cloro, o aumentare significativamente quella per il sodio.
+
+\oss{}{I farmaci agiscono modificando la permeabilità degli ioni, in particolare potassio e cloro, per influenzare l'attività neuronale e regolare stati di eccitazione o inibizione.}
+
+\section{Legge di Ohm}
+La legge di Ohm può essere espressa in due modi equivalenti, dove l'espressione in termini di conduttanza (G, in Siemens) è particolarmente utile in elettrofisiologia. Questo è dovuto a due motivi principali:
+
+\begin{itemize}
+    \item \textbf{Motivo sperimentale:} In elettrofisiologia, si misura la conduttanza piuttosto che la resistenza.
+    \item \textbf{Coerenza con la legge di Goldman:} La forma della legge di Ohm in termini di conduttanza segue la stessa logica della legge delle permeabilità di Goldman, Hodgkin e Katz.
+\end{itemize}
+
+Il lavoro di un neurone consiste nel modificare la permeabilità della membrana aprendo e chiudendo canali ionici. L'apertura dei canali ionici aumenta la permeabilità e, poiché i canali sono disposti in parallelo, aumenta la conduttanza e diminuisce la resistenza.
+
+Gli ioni, come conduttori elettrici di seconda specie, richiedono una forma modificata della legge di Ohm. La legge di Ohm standard (I = GV) è valida per conduttori di prima specie come gli elettroni, che hanno un potenziale di equilibrio di 0. Tuttavia, per gli ioni, il potenziale di equilibrio non è 0 e la corrente non è nulla a 0 mV. 
+
+La legge generalizzata di Ohm è espressa come:
+
+\[
+I = G \cdot (V - V_{\text{ion}})
+\]
+
+dove \(V_{\text{ion}}\) è il potenziale di equilibrio dello ione considerato e \(V\) è il potenziale di membrana. Questa formula consente di calcolare i flussi ionici anche quando il potenziale di membrana non è pari a 0 mV.
+
+Il termine \((V - V_{\text{ion}})\) rappresenta la forza elettromotrice (f.e.m.), che determina il verso della corrente e l'effetto sul potenziale di membrana:
+
+\begin{itemize}
+    \item \textbf{Sodio:} Con un potenziale di equilibrio di +66 mV, la f.e.m. è -66 mV. Una f.e.m. negativa induce una corrente entrante che aumenta il potenziale di membrana.
+    \item \textbf{Potassio:} Con un potenziale di equilibrio di -97 mV, la f.e.m. è +97 mV. Una f.e.m. positiva induce una corrente uscente che diminuisce il potenziale di membrana.
+    \item \textbf{Cloro:} Con un potenziale di equilibrio di -90 mV, la f.e.m. è +90 mV. Anche se la corrente è uscente, fisicamente il cloro entra nella cellula, abbassando il potenziale di membrana.
+\end{itemize}
+
+Questa formulazione permette di correlare la corrente ionica con la conduttanza, il numero di canali ionici aperti, la permeabilità di membrana e il potenziale di membrana.
+
+L'analogia tra membrana cellulare e circuito elettrico RC della \autoref{sec:RC} risulta utile per applicare la legge di Ohm in condizioni sperimentali e calcolare così il potenziale di membrana in funzione della sua resistenza e della corrente passante.
+
+\subsection{Circuito Elettrico e Membrane Cellulari}
+\label{sec:RC}
+Per semplificare la comprensione del comportamento delle membrane cellulari, si utilizza un modello elettrico equivalente (\autoref{fig:ddp_cell}). La legge dell’elettrodiffusione di Nernst-Planck, che descrive il movimento degli ioni attraverso la membrana, trova un'analogia nella legge di Ohm dei circuiti elettrici.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{ddp_cell.png}     \includegraphics[width=0.4\textwidth]{rc.png}
+    \caption{Modello elettrico equivalente.}
+    \label{fig:ddp_cell}
+\end{figure}
+
+A livello strutturale, la membrana cellulare è composta da una doppia struttura lipidica e proteine, tra cui i canali ionici. Gli ioni, essendo carichi, non possono attraversare direttamente il doppio strato fosfolipidico ma possono farlo tramite due modalità principali:
+
+\begin{itemize}
+    \item \textbf{Attraverso i canali ionici:} Questi formano pori acquosi nella membrana che permettono agli ioni di attraversare la membrana "in fila indiana", superando così una resistenza di membrana simile a una resistenza elettrica.
+    
+    \item \textbf{Metodo puramente elettrico:} Gli ioni trasferiscono la loro carica attraverso la membrana senza attraversarla fisicamente. La membrana può essere vista come un condensatore piano, con una capacità (C) di circa 1 µF/cm$^2$. Il potenziale di -70 mV (V) stabilisce un certo numero massimo di cariche (Q) che possono essere ospitate. Quando la carica sulla membrana raggiunge il massimo, le cariche di segno opposto si trasferiscono attraverso la membrana senza che gli ioni stessi passino.
+\end{itemize}
+
+La scelta del metodo dipende dall'efficacia: il primo metodo è legato alla resistenza, mentre il secondo alla capacità. Nella cellula, la corrente può essere capacitiva o resistiva a seconda del momento.
+
+Pertanto, l’equivalente elettrico di una membrana è un circuito RC in parallelo, il che consente l'applicazione delle leggi e proprietà dei circuiti RC, inclusa la legge di Ohm, facilitando l'analisi e la modellizzazione matematica del comportamento della membrana. La presenza di un condensatore introduce un certo grado di complessità nella dinamica del sistema \textit{membrana cellulare -- circuito RC}. Si osservi infatti la \autoref{fig:c}, dove si nota come a fronte di un input di corrente \textit{a gradino}, la variazione del potenziale del condensatore (o membrana) non è contestualmente a gradino -- in accordo con la legge di Ohm -- ma curvilineo, o meglio esponenziale. Il motivo è che il circuito non è puramente resistivo, ma anche capacitivo, e dunque occorre approfondire le leggi fisiche che lo governano. A tal proposito, si ricordano alcuni risultati e se ne introducono di nuovi.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{c.png}
+    \caption{Carica e scarica di un condensatore a fronte di un input di corrente a gradino.}
+    \label{fig:c}
+\end{figure}
+
+\begin{itemize}
+    \item \h{La corrente} $i$ è la quantità di carica $\mathrm{d}q$ che scorre nell'unità di tempo $\mathrm{d}t$. In formula:
+    \begin{equation*}
+        i = \frac{\mathrm{d}q}{\mathrm{d}t}.
+    \end{equation*}
+    
+    \item \h{La variazione del potenziale} $\Delta V$ è data dal prodotto della resistenza $R$ che incontra la corrente totale $I$. In formula $ \Delta V = RI$. Si noti che è una relazione istantanea, vale cioè per ogni istante di tempo: ad una variazione di corrente, corrisponde una immediata variazione di potenziale.
+    
+    \item \h{La legge dei condensatori} afferma che la carica accumulata variazione di potenziale $\Delta V$ sulle sue armature è proporzionale alla variazione di carica $\Delta Q$:
+    \begin{equation*}
+        \Delta V =\frac{1}{C} \Delta Q,
+    \end{equation*}
+    dove $C$ è una costante, detta \h{capacità di membrana}. In modo analgo, una variazione infinitesima è data da
+    \begin{equation*}
+        \mathrm{d} V = \frac{1}{C}\mathrm{d}q.
+    \end{equation*}
+    In questo caso si noti che il potenziale dipende dalla carica, e non dalla corrente. Ciò suggerisce che la dinamica non sia istantanea, come invece nella legge di Ohm: una certa quantità di carica è infatti data da una corrente che, nel tempo, accumula cariche elettriche sulle armature del condensatore, secondo la relazione di prima $\mathrm{d}q = i \mathrm{d}t$.
+\end{itemize}
+
+\subsection{Costante di tempo}
+Si consideri ora il circuito equivalente di membrana in \autoref{fig:ddp_cell}. Sulla destra, lo schema suggerisce che la corrente $i$, nel nodo si divide in due correnti, una diretta attraverso la resistenza $R$, l'altra sul condensatore $C$. Le chiameremo, rispettivamente, \h{corrente capacitiva} $i_C$ e \h{corrente resistiva} $i_R$, l'ultima delle quali è quella che passa attraverso i canali ionici di membrana. Le due sono ovviamente legatte dalla relazione $i = i_C + i_R$ ad ogni istante di tempo. Precisamente:
+\begin{equation*}
+    i(t) = i_R(t) + i_C(t).
+\end{equation*}
+Si noti inoltre che la differenza di potenziale agli estremi del circuito deve essere la medesima, in quanto resistenza e condensatore sono posti in parallelo. Diremo allora che per ogni variazione infinitesima di potenziale $\mathrm{d}V$ vale l'uguaglianza
+\begin{equation*}
+    \mathrm{d}V = \mathrm{d}V_R = \mathrm{d}V_C.
+\end{equation*}
+Sfruttiamo la legge di Ohm infinitesimale per la resistenza $R \mathrm{d} i_R(t) = \mathrm{d} V_R (t)$. Procediamo poi sostituendo anche la relazione valida per la corrente capacitiva $\mathrm{d} V_C(t) = 1/C \mathrm{d} q(t)$ e la relazione che lega corrente e carica $\mathrm{d} q(t) = i_C(t) \mathrm{d} t$. Riassumendo, si ottiene:
+\begin{equation*}
+    \mathrm{d} i_R(t) = \frac{1}{RC} \left(i(t) - i_R(t)\right) \mathrm{d}t.
+\end{equation*}
+Integrando, si ottiene la relazione seguente:
+\begin{equation*}
+    i_R(t) = i(t) \left(1- e^{-\frac{t}{\tau}}\right),
+\end{equation*}
+dove $\tau = RC$ prende il nome di \h{costante di tempo}. Sempre per la legge di Ohm, si conclude che:
+\begin{equation*}
+    \Delta V_m (t) =  i_m (t) R_m \left(1-e^{-t/\tau}\right),
+\end{equation*}
+che caratterizza la dinamica del sistema. 
+
+\subsubsection{Conseguenze fisiche e interpretazione}
+Si osservi nuovamente la \autoref{fig:c}. È immediato notare che l' intensità della corrente di stimolazione non è l'unico fattore che incide nel determinare il potenziale di membrana $\Delta V_m$. È infatti fondamentale anche il fattore temporale, poichè occore far trascorrere degli istanti affinché il potenziale (linea grigia continua) arrivi a regime. Quindi, anche a fronte di una stimolazione molto intensa, ma istantanea, il pontenziale non farà in tempo ad arrivare a regime. Si distingue allora una \h{fase di carica} e una \h{fase di scarica}.
+
+Inoltre, l'andamento della curva esponenziale è strettamente legato al suo esponente, in questo caso $1/\tau$. $R$ e $C$ sono caratteristiche proprie delle fibre nervose: in particolare, mentree $C$ è dovuta principalmente alla dimensione della membrana, $R$ può essere regolata dall'apertura e chiusura dei canali ionici.
+
+\oss{Andamento esponenziale}{Se una quantità $x$ varia con andamento esponenziale, significa che, nell'unità di tempo varia della stessa frazione. Nel caso esaminato, ad ogni unità temporale, la variazione è negativa (segno meno) della frazione $\tau$.}
+
+La costante di tempo ci dice che trascorso un tempo $t=\tau$, il potenziale di membrana è arrivato al 64\% del suo valore finale $i_m(t) R_m$. Similmente, trascorso un tempo $t=6\tau$, possiamo dire che è stato raggiunto il valore di regime. Formalmente non viene mai raggiunto, ma l'errore commesso dopo $5\tau$ è inferiore all' 1\%.
+
+\subsection{Costante di spazio}
+È ragionevole aspettarsi che, avendo a che fare con delle resistenze, il comportamento in una fibra nervosa corta sia differente da quello in una molto lunga. Dunque ci aspettiamo che in qualche modo rientri anche una variabile spaziale nella descrizione della dinamica del sistema.
+
+Si consideri allora una sezione cilindrica, completamente contenuta in un assone, come disegnato in \autoref{fig:rcrc}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{rcrc.png}
+    \caption{Modello equivalente di un assone.}
+    \label{fig:rcrc}
+\end{figure}
+
+A ciascun circuito possiamo assegnare una resistenza equivalente, e dunque concludere per la legge di Ohm che la corrente totale si distribuisce in modo inversamente proporzionale alle resistenze che incontra. In particolare le resistenze che incontra sono di due tipi:
+\begin{enumerate}
+    \item citoplasmatiche $R_a$, per passare da un nodo al successivo;
+    \item di membrana $R_m$, che rappresentano l'ostacolo dei canali ionici.
+\end{enumerate}
+Una frazione di corrente dunque si dirige dal primo nodo al secondo, in modo inversamente porporzionale alla resistenza. Una frazione di questa frazione proseuge al terzo nodo, e così via. Ad ogni nodo, dunque, la frazione di corrente disponibile sarà sempre minore, in particoalre decresce esponenzialmente in funzione dello spazio. La conseguenza è che i nodi più lontani dallo stimolo elettrico non \textit{percepiscono} la variazione di potenziale.
+
+Si dimostra facilmente che la dinamica del potenziale di membrana è descritta dalla relazione
+\begin{equation*}
+    V_m = V_0 e^{-\frac{x}{\lambda}},
+\end{equation*}
+dove $V-m$ è il potenziale di membrana, $V_0$ il potenziale di riposo, $x$ la distanza spaziale, e $\lambda$ la \h{costante di spazio}, così definita
+\begin{equation}
+    \label{eq:lambda}
+    \lambda = \sqrt{\frac{R_m}{R_a}}.
+\end{equation}
+Nella realtà, la costante di spazio assume valori superiori a $1-2$ micron, ma varia molto a seconda della fibra nervosa considerata. Assoni con sezione maggiore, avranno una resistenza $R_a$ minore, e dunque $\lambda$ maggiore. Si può modulare invece $R_m$, sempre tramite apertura e chiusura dei canali ionici. Tuttavia, in ogni caso, per distanze lunghe, risulta necessario amplificare il segnale per far giungere fino in periferia il segnale elettrico. 
+
+
+\section{Stimolazione cellula}
+Per stimolare una cellula eccitabile si ricorre ad un apparato sperimentale. In laboratorio si posiziona un elettrodo positivo all'interno di un assone di una fibra nervosa periferica e, distante, un altro elettrodo al suo esterno. Nel paziente invece si pongono entrambi gli elettrodi sulla superficie cutanea, seguendo il percorso anatomico del nervo. Buona parte della corrente rimane esterna alla fibra e quindi attraversa l'epidermide. Occorre allora distinguere questa corrente da quella di stimolazione vera e propria (\autoref{fig:stimo}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{stimo.png}
+    \caption{Modello equivalente di un assone.}
+    \label{fig:stimo}
+\end{figure}
+
+Per registrare l'effetto dell'attivazione delle fibre muscolari e della velocità di conduzione si posizionano altri due elettrodi al di sotto dell'elettrodo negativo.
+
+\subsubsection{Nomenclatura}
+Definiamo prima alcuni termini circa il potenziale di membrana:
+\begin{itemize}
+    \item \h{iperpolarizzazione}: valori più negativi di quello di riposo, quindi < -70mV;
+    \item \h{depolarizzazione}: valori maggiori di quello di riposo, quindi > 70mV;
+    \item \h{inversione}: eccesso positivo del potenziale (desueto);
+    \item \h{ripolarizzazione}: ritorno da un valore depolarizzato al valore di riposo;
+    \item \h{rilassamento}: ritorno al valore di riposo da un valore più negativo.
+\end{itemize}
+
+\subsubsection{Stimolazione e risposta attiva}
+Per studiare l'eccitabilità della cellula si studia la sua risposta al variare di un input di corrente a gradino di \h{intensità}, \h{polarità} e \h{durata} variabile. Con riferimento alla \autoref{fig:pot} vediamo le risposte del potenziale di membrana.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{pot.png}
+    \caption{Potenziale di membrana di un neurone, al variare dello stimolo elettrico.}
+    \label{fig:pot}
+\end{figure}
+
+\begin{itemize}
+    \item Per uno stimolo di corrente a polarità \h{negativa} la membrana si iperpolarizza con andamento esponenziale, per poi rilassarsi, indipendentemente da intensità e durata della corrente, sempre con andamento esponenziale.
+    \item Per uno stimolo di corrente a polarità \h{positiva}:
+    \begin{itemize}
+        \item per \h{basse intensità}, la membrana si depolarizza ma, al termine della stimolazione, si ripolarizza, dunque con una \h{risposta passiva}.
+        \item per \h{intensità sufficientemente alte}, la membrana si depolarizza e, raggiunti i \h{-40mV}, si osserva una \h{risposta attiva}.
+    \end{itemize}
+\end{itemize}
+
+La risposta attiva è giustificata da un cambio di resistenza di membrana, da una ulteriore sorgente di corrente, o da entrambe in contemporanea. Si osserva inoltre che la risposta attiva è sempre identica, a prescindere dalla stimolazione precedente che ha portato il potenziale ai -40mV. Questo potenziale di soglia è detto \h{potenziale d'azione}.
+\oss{}{Nella realtà il potenziale d'azione (PA) è leggermente inferiore ai -40mV.}
+
+\subsubsection{Reobase e cronassia}
+Per valutare l'eccitabilità di un substrato si usano due parametri: \h{reobase} e \h{cronassia}.
+\begin{itemize}
+    \item Reobase: è l'intensità minima di stimolazione da applicare per un tempo di $5\div6\tau$ necessaria per provocare una risposta attiva.
+    \item Cronassia: una volta misurato il reobase, si misura la cronassia, cioé il tempo minimo di applicazione di uno stimolo ampio il doppio del reobase per provocare una risposta attiva.
+\end{itemize}
+
+\oss{Patologia}{In alcune patologie, stimoli lenti o non sufficientemente intensi non consentono di raggiungere il valore soglia, e quindi produrre una risposta attiva.}
+
+\subsubsection{Esperimento di Hodgkin e Huxley}
+L'esperimento di Hodgkin e Huxley si propone di comprendere quali correnti ioniche sono alla base del potenziale d'azione, sfruttando la legge generalizzata di Ohm. Posizionando le due coppie di elettrodi come descritto prima si può registrare potenziale elettrico di membrana e, contemporaneamente, la corrente di membrana (voltage clamp).
+
+\sidefigure{img/hh}{Esperimento di Hodgkin e Huxley.}{hh}
+
+L'esperimento è condotto su un assone di calamaro in diverse condizioni.
+\begin{enumerate}
+    \item[(A)] [\chemfig{Na^+}]$_e$ > [\chemfig{Na^+}]$_i$. Equilibrio di Nernst: $E_{Na} = + 66$ mV. (Fisiologico);
+    \item[(B)] [\chemfig{Na^+}]$_e$ = [\chemfig{Na^+}]$_i$. Equilibrio di Nernst: $E_{Na} 0$ mV.
+    \item[(C)] [\chemfig{Na^+}]$_e$ < [\chemfig{Na^+}]$_i$. Equilibrio di Nernst: $E_{Na} = -30$ mV.
+\end{enumerate}
+
+Portando il potenziale dal riposo di -60mV a 0mV, nella condizione (A), si osserva una corrente di sodio inizialmente entrante e, successivamente, diventa uscente. Per capire quali ioni inducono questa corrente, si veda la condizione (B). In questo caso la concentrazione esterna ed interna è identica, dunque il poenziale di Nernst è nullo e allora nessuna forza sostiene il flusso degli ioni di sodio. Non si osserva infatti più la corrente entrante (picco negativo), ma solo quella uscente, lenta e crescente. Da ultiimo, nella condizione (C), invertendo le concentrazioni di sodio intra- ed extracellulare, il potenziale di equilibrio di Nernst del sodio è -30 mV. Portando il potenziale di membrana a 0 mV, la \(f.e.m.\) del sodio diventa dunque +30 mV, inducendo una corrente uscente. 
+
+L'inversione della corrente di sodio da entrante a uscente, nonostante i canali siano ancora aperti (conduttanza invariata), conferma che la precedente corrente entrante era dovuta al sodio. Un esperimento simile è stato condotto per identificare lo ione responsabile della corrente uscente.
+
+% lez 5
+\subsection{Canali Ionici e Classificazione}
+
+Il passaggio di corrente ionica che contribuisce al potenziale di riposo avviene tramite canali ionici voltaggio-dipendenti, uno dei vari tipi di canali presenti nelle cellule nervose. I canali ionici si classificano secondo due criteri principali:
+
+\begin{itemize}
+    \item In base allo \h{ione permeante}.
+    \begin{itemize}
+        \item \textbf{Specifici:} selettivi per uno ione, in base ai residui amminoacidici che formano il filtro di selettività nel canale. Esempi includono canali per sodio, calcio, potassio e cloro.
+        \item \textbf{Aspecifici:} permettono il passaggio di più ioni (es. sodio e potassio, oppure sodio, calcio e potassio).
+    \end{itemize}
+    \item In base alla \h{modalità di apertura}.
+    \begin{itemize}
+        \item \textbf{Canali di perdita (leak):} sempre aperti, mantengono il potenziale di riposo.
+        \item \textbf{Ligand-gated:} si aprono quando legano specifiche molecole intracellulari (es. cAMP, cGMP, ATP) o extracellulari (ATP, GTP, Ca\textsuperscript{++}).
+        \item \textbf{Voltaggio-dipendenti:} si aprono quando il potenziale di membrana raggiunge un valore critico.
+        \item \textbf{Meccanici (stretch-activated):} attivati da variazioni meccaniche nella membrana (es. nei neuroni ipotalamici sensibili all'osmolarità).
+        \item \textbf{Heat-activated:} percepiscono variazioni di temperatura, agendo in un range tra 5° e 45°C, permettendo la regolazione della temperatura corporea; sopra i 45°C per identificare stimoli dolorosi.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Canali Na\textsuperscript{+} Voltaggio-Dipendenti}
+I canali Na\textsuperscript{+} voltaggio-dipendenti mostrano lievi variazioni a seconda del tessuto in cui si trovano, un aspetto rilevante in farmacologia. Tuttavia, il loro funzionamento generale è simile. La soglia per l'apertura dei canali Na\textsuperscript{+} è -40 mV, e una volta raggiunto tale potenziale, essi si aprono permettendo l'ingresso di Na\textsuperscript{+} nella cellula. Questo ingresso depolarizza ulteriormente la membrana, cercando di portare il potenziale di membrana al potenziale di equilibrio del sodio (+66 mV).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{na.png}
+    \caption{Ciclo di apertura-inattivazione-chiusura di un canale sodio-voltaggio dipendente.}
+    \label{fig:na}
+\end{figure}
+
+L'\h{inibizione} dei canali Na\textsuperscript{+} ha effetti potenzialmente letali. Alcune tossine, come la tetrodotossina (TTX) e la saxitossina (STX), bloccano i canali a concentrazioni micromolari. Degli anestetici locali come lidocaina, procaina e tetracaina, si comportano in modo simile, ma a concentrazioni più elevate (millimolari) e in modo controllato.
+
+I canali Na\textsuperscript{+} presentano due porte con \h{cinetiche} differenti: una  \textbf{porta di attivazione} ed una \textbf{porta di inattivazione} con velocità differenti. In condizioni di riposo (-70 mV), la porta di attivazione è chiusa, mentre quella di inattivazione è aperta: non c'è flusso. Durante la depolarizzazione, a -55 mV (valore soglia), la porta di attivazione si apre rapidamente, permettendo il flusso di ioni Na\textsuperscript{+}, mentre la porta di inattivazione lentamente si chiude. Dopo 0,2-0,3 s, la porta di inattivazione si è chiusa completamente, impedendo ulteriori flussi ionici (\autoref{fig:na}) attraverso il canale, che ora si trova nello stato \h{inattivo}. Durante la ripolarizzazione, non appena si supera il valore soglia, la porta di attivazione si chiude e la porta di inattivazione si riapre lentamente. Fintantoche il ciclo non è terminato, si dice che il canale è in periodo \h{refrattario}.
+
+I canali Na\textsuperscript{+} possono essere in tre stati: \h{aperti, inattivi o chiusi}. Il passaggio da uno stato all'altro segue un ordine preciso: da aperto a inattivo, e poi a chiuso. Questo processo è fondamentale per l'eccitabilità neuronale e la conduzione del potenziale d'azione.
+
+\subsubsection{Canali K\textsuperscript{+} Voltaggio Dipendenti}
+I canali K\textsuperscript{+} sono tra i più antichi comparsi nelle membrane cellulari dei protozoi e, nel corso dell'evoluzione, si sono ampiamente differenziati. Sebbene esistano circa 10-12 famiglie con diverse varianti (4-5 per ciascuna famiglia), per semplicità possiamo approssimarli a un unico tipo.
+
+Come i canali Na\textsuperscript{+}, anche i canali K\textsuperscript{+} giocano un ruolo cruciale nell'eccitabilità cellulare e, di conseguenza, sono bersagli di tossine e farmaci (4AP: 4-amminopiridine, TEA: tetraetilammonio, $\alpha$ e $\beta$-conotoxin: conus spp.). Questi canali sono particolarmente importanti nella fase di ripolarizzazione della membrana, poiché il potenziale di equilibrio del K\textsuperscript{+} è di circa -97 mV. Quando i canali K\textsuperscript{+} si aprono, permettono il flusso di potassio verso l'esterno della cellula, facilitando la ripolarizzazione.
+
+La soglia per l'apertura dei canali K\textsuperscript{+} voltaggio dipendenti è -40 mV, simile a quella dei canali Na\textsuperscript{+} voltaggio dipendenti.
+
+\subsubsection{Canali Ca\textsuperscript{2+} Voltaggio Dipendenti}
+
+I canali Ca\textsuperscript{2+} voltaggio dipendenti svolgono un ruolo cruciale sia a livello nervoso che muscolare. Nel cuore, ad esempio, sono fondamentali per la regolazione del battito cardiaco, mentre nel muscolo scheletrico e liscio, il calcio funge da mediatore tra lo stimolo elettrico (depolarizzazione della membrana) e la risposta metabolica (contrazione muscolare). La concentrazione intracellulare di calcio a riposo è mantenuta molto bassa, per garantire che qualsiasi aumento di Ca\textsuperscript{2+} in seguito a uno stimolo sia rapidamente percepito dai recettori intracellulari.
+
+I canali Ca\textsuperscript{2+} sono suddivisi in diverse famiglie, ognuna con una distribuzione specifica a seconda del tessuto. In passato, il gruppo R raccoglieva i canali che resistevano ai bloccanti specifici; tuttavia, con l'avanzamento delle tecniche di analisi genetica, i canali del gruppo R sono stati ridistribuiti nelle altre categorie.
+
+Alcuni composti farmacologici possono influenzare l'attività dei canali Ca\textsuperscript{2+}. Tra questi:
+\begin{itemize}
+    \item \textbf{Verapamil e Diltiazem:} Questi farmaci vengono usati per rallentare la trasmissione delle informazioni nel sistema nervoso centrale, particolarmente in condizioni neurologiche o psichiatriche. Riducono l'afflusso di calcio, abbassando l'eccitabilità neuronale.
+    \item \textbf{Metalli pesanti (es. Cadmio):} A concentrazioni micromolari, il cadmio può sostituire il calcio e bloccare i canali Ca\textsuperscript{2+} voltaggio dipendenti, agendo in maniera simile a tossine.
+    \item \textbf{Bay-K 8644:} Questo composto modula i canali Ca\textsuperscript{2+}, prolungando il loro tempo di apertura, aumentando così la concentrazione di calcio intracellulare e, di conseguenza, la forza contrattile delle cellule muscolari.
+\end{itemize}
+
+\subsection{Fasi del Potenziale d’Azione}
+
+Il potenziale d’azione rappresenta uno stimolo che viaggia nelle fibre nervose, in particolare nel sistema nervoso periferico. Questo processo si sviluppa in diverse fasi distinte, descritte anche in \autoref{fig:pa}:
+
+\begin{description}
+    \item \textbf{Fase Passiva} Si parte dal \textit{potenziale di riposo} a circa -70 mV. Durante questa fase, si verifica una stimolazione che porta il potenziale di membrana alla soglia di attivazione. Fino a che il potenziale è sotto la soglia, il sistema segue una \textit{cinetica passiva}, governata dalla costante di tempo, conducendo a una \textit{depolarizzazione passiva}. Una volta raggiunta la soglia, si innesca la {fase di spike}.
+    
+    \item \textbf{Fase di Spike} Conosciuta anche come \textit{potenziale a punta}, questa fase è caratterizzata da una rapida depolarizzazione seguita da una fase di ripolarizzazione. La fase di depolarizzazione è contraddistinta dall'apertura dei canali Na\textsuperscript{+} voltaggio-dipendenti, che aumentano il potenziale di membrana fino a circa +40 mV. Il potenziale non raggiunge i +66 mV (potenziale di equilibrio del sodio) perché le porte di inattivazione dei canali Na\textsuperscript{+} si chiudono prima.
+    
+    \item \textbf{Fase Positiva} La fase di ripolarizzazione inizia con l’inattivazione dei canali Na\textsuperscript{+} e viene velocizzata dall'apertura lenta dei canali K\textsuperscript{+}, che iniziano ad attivarsi a -40 mV. Questo processo tende a riportare il potenziale di membrana verso il potenziale di equilibrio del potassio (-97 mV).
+    
+    Dopo la ripolarizzazione, i canali K\textsuperscript{+} si chiudono lentamente. Di conseguenza, la membrana si iperpolarizza superando persino il potenziale di riposo e avvicinandosi al potenziale di equilibrio del K\textsuperscript{+} (-97 mV). In alcune cellule ricche di canali K\textsuperscript{+}, la membrana raggiunge effettivamente questo valore. Dopo circa 2 ms, la membrana inizia a depolarizzarsi nuovamente, tornando gradualmente al potenziale di riposo.
+    
+    A questo punto, il potenziale d'azione può terminare o, nel caso del sistema nervoso periferico, continuare attraverso due ulteriori fasi, il {potenziale postumo negativo} e il {potenziale postumo positivo}.
+    
+    \item \textbf{Potenziale Postumo Negativo} Tra 1 e 2 ms, si osserva una massiccia fuoriuscita di K\textsuperscript{+} dalla cellula, che rimane confinata nella guaina mielinica degli assoni periferici. Questo accumulo di K\textsuperscript{+} aumenta la concentrazione extracellulare di potassio, e ciò comporta un lieve aumento del potenziale di membrana, secondo la legge di Goldman. Le pompe Na\textsuperscript{+}/K\textsuperscript{+} accelerano quindi il loro turnover per ripristinare l’equilibrio di membrana.
+    
+    \item \textbf{Potenziale Postumo Positivo} Il bilancio della pompa Na\textsuperscript{+}/K\textsuperscript{+} provoca un ulteriore effetto iperpolarizzante, poiché espelle tre ioni Na\textsuperscript{+} per ogni due K\textsuperscript{+} immessi. Questo causa un'ulteriore leggera oscillazione sotto il potenziale di riposo, prima che la membrana ritorni al suo valore di -70 mV grazie all’azione della pompa Na\textsuperscript{+}/K\textsuperscript{+}.
+\end{description}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{pa.png}
+    \caption{Fasi del potenziale d'azione.}
+    \label{fig:pa}
+\end{figure}
+
+\oss{Confronto sistema nervoso centrale e periferico}{
+Nel sistema nervoso centrale, i potenziali postumi negativo e positivo non si verificano. Invece delle guaine mieliniche, che trattengono il K\textsuperscript{+}, il sistema nervoso centrale dispone degli astrociti, che sequestrano il K\textsuperscript{+} e lo ridistribuiscono alle aree inattive per mantenere costante la concentrazione extracellulare di potassio. Questo previene la formazione di potenziali postumi, che interferirebbero con la trasmissione del segnale.
+
+Nel sistema nervoso periferico, invece, l’informazione viene trasmessa principalmente attraverso la fase di spike, e quindi successive depolarizzazioni e iperpolarizzazioni non alterano il segnale trasmesso.}
+
+\subsection{Ciclo di Hodgkin}
+Il ciclo di Hodgkin descrive le fasi del potenziale d'azione ed è un modello puramente descrittivo. Questo ciclo rappresenta uno dei pochi esempi di retroazione positiva (feedback positivo), un meccanismo raro nel corpo umano dove prevalgono sistemi a feedback negativo per mantenere l'omeostasi. I sistemi a retroazione positiva sono usati per spostare l'equilibrio del sistema da un valore all'altro, incrementando l'azione di ogni passaggio successivo.
+
+Nel ciclo di Hodgkin, durante la fase di \textit{spike}, tutto ha inizio da una depolarizzazione iniziale che porta il potenziale di membrana a soglia. A questo punto si aprono i canali \( \text{Na}^+ \) voltaggio-dipendenti, il che causa un'ulteriore depolarizzazione oltre soglia, incrementando il numero di canali \( \text{Na}^+ \) aperti, e così via. Per questo motivo, in pochi millisecondi si raggiunge il picco di depolarizzazione.
+
+Alla soglia di -40 mV iniziano ad aprirsi anche i canali \( \text{K}^+ \), che si apriranno completamente quando il potenziale di membrana arriva a +40 mV. Successivamente, questi fenomeni daranno inizio alla ripolarizzazione della membrana.
+
+Un aspetto clinico e funzionale interessante è che il valore soglia può "accomodarsi", cioè modificarsi in base alla velocità con cui si raggiunge la soglia. Questo accade perché le porte di inattivazione dei canali \( \text{K}^+ \) non hanno una soglia propria per iniziare a muoversi; risultano essere più aperte quanto più il potenziale è negativo e più chiuse quanto più il potenziale diventa positivo.
+
+Le porte di inattivazione dei canali \( \text{K}^+ \) hanno una parziale carica positiva, quindi se il potenziale raggiunge la soglia troppo lentamente, i canali \( \text{K}^+ \) possono inattivarsi prima di aprirsi. Questa corrente di \( \text{K}^+ \) può essere accomodata (inattivata) anche senza farmaci, semplicemente attraverso stimoli lenti. Ad esempio, nelle cellule di Purkinje del cervelletto, mantenendo la cellula iperpolarizzata per un sufficiente numero di millisecondi, il potenziale soglia può scendere da -40 mV a -60 mV.
+
+\subsection{Esempi di Potenziali in Altri Tipi Cellulari}
+Diversi tipi cellulari producono potenziali d'azione con caratteristiche diverse, legate alla funzione delle cellule stesse.
+
+\subsubsection*{Potenziale Neuronale}
+Nelle cellule neuronali, il potenziale d'azione ha una durata maggiore rispetto ad altri tipi cellulari, a causa dell'assenza di canali \( \text{K}^+ \), il che comporta una ripolarizzazione più lenta (\autoref{fig:paa}, in alto). La fase di spike può durare molto oltre 1 ms.
+
+\subsubsection*{Potenziale nei Sistemi Recettoriali}
+Nei sistemi recettoriali, sono presenti canali \( \text{K}_\text{Ca} \), che non sono voltaggio dipendenti, ma si aprono in base alla concentrazione intracellulare di calcio. Questi canali prolungano la fase positiva. Nel grafico, l'attogramma mostra come la frequenza di scarica diminuisca nel tempo a fronte di uno stimolo costante, fenomeno noto come \textit{adattamento recettoriale}. Questo meccanismo, nel muscolo cardiaco, prolunga la sistole da 150 a 300 ms, mentre senza i canali \( \text{Ca}_\text{L} \), durerebbe solo 1 ms.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{paa.png}
+    \caption{Modulazione di diversi potenziali d'azione.}
+    \label{fig:paa}
+\end{figure}
+
+\subsection{Refrattarietà}
+Un potenziale d'azione può non essere generato se la cellula nervosa è in una fase di refrattarietà, che può essere di due tipi.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{refra.png}
+    \includegraphics[width=0.6\textwidth]{refra2.png}
+    \caption{Refrattarietà dei potenziali d'azione.}
+    \label{fig:refra}
+\end{figure}
+
+\subsubsection*{Refrattarietà Assoluta}
+Durante la fase di spike, non è possibile generare un nuovo potenziale d'azione, indipendentemente dall'intensità dello stimolo, poiché i canali \( \text{Na}^+ \) sono già aperti o inattivati.
+
+\subsubsection*{Refrattarietà Relativa}
+Dopo la fase di spike, man mano che si esce dalla fase refrattaria assoluta, è possibile generare un nuovo potenziale d'azione con uno stimolo più intenso del precedente, poiché alcuni canali \( \text{Na}^+ \) sono nuovamente disponibili. Tuttavia, la membrana si trova in uno stato iperpolarizzato, richiedendo quindi uno stimolo maggiore per raggiungere la soglia.
+
+La durata della refrattarietà relativa dipende dal numero di canali \( \text{Na}^+ \) chiusi e riapribili dopo lo spike, oltre alla presenza di canali \( \text{Ca}^{2+} \) e \( \text{K}^+ \) nella membrana cellulare.
+
+L'eccitabilità della membrana raggiunge il 100\% prima della fase di spike e dopo la refrattarietà relativa, mentre è pari a 0\% durante la fase di spike e la refrattarietà assoluta, aumentando progressivamente durante la refrattarietà relativa.
+
+
+\section{Propagazione del potenziale di azione}
+Se è indispensabile che i neuroni sappiano generare il potenziale d'azione, è altrettanto importante che il potenziale stesso possa propagarsi lungo l'assone, con il compito di trasmettere segnali che devono essere captati da cellule eccitabili di origine neuronale e non, come le fibre muscolari.
+
+La costante di spazio relativamente corta, sommata all'esigenza di propagare il potenziale per distanze lunghe (anche oltre il metro), pone la questione di come ciò possa avvenire, e soprattutto avvenire in modo efficiente, rispettando vincoli richiesti dalla selezione evolutiva che chiede segnali molto rapidi. La propagazione puramente passiva del potenziale d'azione non garantisce che questo possa viaggiare da una parte all'altra dell'assone, anche se breve. È necessario, dunque, ottimizzare la costante di spazio e trovare modi efficienti per rigenerare il potenziale d'azione lungo il percorso.
+
+\oss{}{La propagazione passiva (elettronica) non supera 1-2$\lambda$, all'incirca 1mm. Il PA deve dunque necessariamente autopropagarsi.}
+
+In natura si sono evolute parallelamente due strutture strategiche per rendere la costante di spazio il più lunga possibile e velocizzare la propagazione del segnale: le \h{fibre amieliniche} (con le loro varie dimensioni) e le \h{fibre mieliniche}.
+
+\subsection{Le Fibre Mieliniche e Amieliniche}
+Si consideri la \autoref{fig:mie}. A sinistra si vede una sezione del nervo misto di calamaro dove la cavità in mezzo è costituita da un assone ``gigante'' di calamaro, lo stesso usato da Hodgkin e Huxley per i loro esperimenti proprio perché, essendo caratterizzato da un diametro di 1-2 mm, risulta facilmente utilizzabile a scopo sperimentale. La strategia di avere una sezione così grande deriva dal fatto che la resistenza citoplasmatica ($R_c$) a queste dimensioni risulta molto bassa e, così facendo, la costante di spazio (\autoref{eq:lambda}), assume valori più consistenti. Ad una costante di spazio maggiore corrisponde, poi, una velocità di propagazione più grande.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{mie.png}
+    \caption{Confronto fibra amielinica di calamaro (sinistra), e nervi umani mielinizzati (destra).}
+    \label{fig:mie}
+\end{figure}
+
+\sidefigure{img/ax}{Lunghezze degli assoni a confronto.}{ax}
+
+Questo è un assone motore e serve al calamaro per fuggire dai suoi predatori: di conseguenza è molto importante che esso risponda in termini efficaci. Il nostro corpo, tuttavia, chiede dimensioni contenute e, se si vuole allo stesso tempo arricchire il sistema nervoso di tante funzioni, risulta necessario formare più vie di comunicazione in parallelo. Non si può dunque fare affidamento su assoni così grandi.
+
+Nella \autoref{fig:mie}, a destra, troviamo un preparato istologico che raffigura una sezione di nervi mielinizzati misti in cui contemporaneamente passano centinaia o migliaia di vie di comunicazione in parallelo. La sezione degli assoni da cui sono composti risulta molto minore rispetto a quella dell’assone amielinico gigante di calamaro, tanto che se essi avessero la stessa dimensione, il nervo raggiungerebbe un diametro di 16 mm. All’interno di queste vie, inoltre, la velocità di propagazione è estremamente elevata, nonostante il ridotto diametro. Ci si aspetta dunque che la mielina svolga un ruolo fonamentale nella propagazione del segnale elettrico.
+
+\subsubsection{La Conduzione nelle Fibre Amieliniche}
+Il corpo umano, come quello di tanti vertebrati, ha comunque conservato le fibre non mieliniche per svolgere quelle funzioni nelle quali il fattore velocità non è fondamentale, mentre nel resto del sistema nervoso possediamo fibre mieliniche.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{miel.png}
+    \caption{Conduzione in fibre non mieliniche.}
+    \label{fig:miel}
+\end{figure}
+
+Nella \autoref{fig:miel} si può osservare la rappresentazione schematica di una fibra amielinica. A sinistra è raffigurato il cono di emergenza, seguito dal soma, e più a destra si vede l’inizio dell’assone. Quest’ultima porzione è caratterizzata da una maggiore densità di canali del sodio voltaggio-dipendenti che, da quel punto in poi, sono ubiquitari sulla superficie assonale. I canali del sodio non sono dunque presenti a livello del soma e pure dei dendriti.
+
+A livello del cono di emergenza, quando un fattore soprasoglia raggiunge la \h{zona di trigger}, i canali del sodio voltaggio-dipendenti si aprono, depolarizzando ulteriormente la membrana. Il sodio introdotto nell'assone scorre verso le zone adiacenti dove la densità di carica è minore, sia verso il soma, sia verso la parte distale dell'assone. A partire dalla regione di trigger si generano dunque due potenziali d’azione che si propagano in due direzioni opposte, di cui una sola è desiderata. Solo uno però prosegue lungo l'assone. Infatti, nel soma non ci sono canali del sodio voltaggio-dipendenti, che quindi non sono in grado di propagare il PA. La zona di trigger si propaga dunque distalmente nella \h{regione attiva}, e diventa \h{regione refrattaria}, in cui i canali del sodio si chiudono, mentre quelli del potassio si aprono e ripolarizzano la membrana.
+
+La \h{refrattarietà assoluta} dell'assone è una fase in cui una porzione della membrana non può generare un nuovo potenziale d'azione, indipendentemente dalla forza dello stimolo applicato. Questa condizione si verifica immediatamente dopo un potenziale d'azione, quando i canali del sodio voltaggio-dipendenti sono inattivati e non possono riaprire. Durante questa fase, la membrana è incapace di rispondere a ulteriori stimoli, garantendo che il potenziale d'azione si propaghi solo in avanti lungo l'assone, evitando la propagazione per depolarizzazione retrograda. Questo fenomeno è fondamentale per mantenere l'unidirezionalità del segnale elettrico e prevenire interferenze tra i potenziali successivi.
+
+\oss{}{Nel caso dell'assone del calamaro, la costante di spazio è ottimizzata per massimizzare l'estensione delle regioni in cui viene generato il PA, sebbene sia comunque inferiore a un millimetro. Pertanto, in un assone lungo un metro, sono necessari migliaia di potenziali d'azione per garantire la propagazione. Sebbene ogni potenziale si generi rapidamente (circa 0,2 millisecondi), la moltiplicazione di questi eventi lungo l'intero assone rallenta la propagazione complessiva, rendendola relativamente lenta rispetto alla scala cellulare, anche se ancora efficace quando non è richiesta la massima velocità.}
+
+\subsubsection{La conduzione nelle fibre mieliniche}
+Le fibre mieliniche sono caratterizzate dalla presenza della \h{guaina} mielinica, una struttura lipidica -- quindi isolante -- fornita agli assoni da due tipi di cellule diverse, a seconda che si parli di neuroni del Sistema Nervoso Centrale (SNC) o del Sistema Nervoso Periferico (SNP). Nel SNC la guaina di mielina è fornita dagli \h{oligodendrociti}, cellule che avvolgono più assoni neuronali mielinizzandoli contemporaneamente, mentre nel SNP ci sono le cellule di \h{Schwann}, una per ogni manicotto mielinico. La mielina è avvolta a spire strette attorno all’assone. L’ambiente extracellulare, di conseguenza, non è più a disposizione diretta della membrana dell’assone che sta al di sotto della guaina mielinica, e la sua presenza determina un incremento di resistenza di membrana ($R_m$) e una diminuzione della sua capacità.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{mieli.png}
+    \caption{Conduzione in fibre mieliniche.}
+    \label{fig:mieli}
+\end{figure}
+
+Nonostante la presenza di una guaina mielinica continua, la propagazione passiva del potenziale d'azione (PA) non è possibile, poiché la costante di spazio è limitata a 1-2 mm. Per questo motivo, la guaina mielinica si interrompe periodicamente in corrispondenza dei \h{nodi di Ranvier}, dove sono presenti i canali del sodio voltaggio-dipendenti necessari per rigenerare il PA.
+
+I canali del potassio voltaggio-dipendenti sono localizzati solo all'inizio degli internodi adiacenti, dove le spire di mielina sono meno compatte, contribuendo a una fase di ripolarizzazione più prolungata. Il PA si genera in un nodo di Ranvier e la depolarizzazione attraversa l’internodo, raggiungendo la soglia del nodo successivo. Ciò consente di ridurre il numero di PA necessari, accelerando così la propagazione del segnale, in un meccanismo noto come \h{conduzione saltatoria}. Infatti, dato che la resistenza di membrana aumenta molto, ma la capacità diminuisce relativamente di più, la costante di tempo ($\tau = R_m C_m$) diminuisce.
+
+\subsubsection{Patologie e conduzione mielinica}
+In alcune patologie, la guaina mielinica delle fibre nervose può deteriorarsi o scomparire quasi totalmente. In queste circostanze, i nodi di Ranvier restano stabili, e i canali sodio voltaggio-dipendenti non si distribuiscono uniformemente lungo l'assone, a causa di molecole segnale che li trattengono.
+
+Pertanto, il potenziale d'azione deve ugualmente saltare da un nodo all'altro. Tuttavia, la costante di spazio è -- senza più la guaina mielinica -- pari a circa 1-2 micron, insufficiente per portare a soglia il nodo successivo. Senza il ripristino della mielina e con i canali sodio intrappolati, la conduzione del potenziale d'azione può dunque interrompersi, causando perdita di sensibilità, mobilità compromessa e, nei casi gravi, insufficienza respiratoria o altre funzioni vitali. Questa degradazione colpisce in particolare le fibre mieliniche del sistema nervoso periferico (SNP), mentre le fibre non mieliniche non mostrano effetti significativi.
+
+\oss{Il guadagno di velocità nelle fibre mieliniche}{
+    Il guadagno di velocità nelle fibre mieliniche non è sempre conveniente. Si dimostra sperimentalmente che la velocità di propagazione del potenziale nei due tipi di fibre, mieliniche ed amieliniche, segue due diverse leggi:
+\begin{itemize}
+    \item fibre mieliniche: $V \propto d$;
+    \item fibre non mieliniche: $V \propto  \sqrt{d}$,
+\end{itemize}
+dove $d$ è il diametro della fibra. Tracciando queste due leggi in un grafico, con la velocità di propagazione ($V$) sull’asse delle ordinate e il diametro della fibra ($d$) sull’asse delle ascisse, si può osservare che per diametri inferiori al micron la velocità di conduzione delle fibre non mieliniche è maggiore rispetto a quella delle fibre mieliniche. Pertanto, la mielina risulta un vantaggio solo per diametri superiori al micron.}
+
+\sidefigure{img/mielamiel}{Il vantaggio nella velocità di conduzione delle fibre miliniche è raggiunto oltre il micron di diametro.}{mielamiel}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| l | l | l | l |}
+        \hline
+        Fibra	& Velocità & Meccanismo	& Diametro tipico\\
+        \hline
+        Mielinica & 5 - 120 m/s & Saltazione & 1 - 20 $\mu$m \\
+        \hline
+        Amielinica & 0.5 - 2 m/s &	Conduzione continua	& 0,5 - 1 $\mu$m\\
+        \hline
+    \end{tabular}
+    \caption{Confronto velocità e meccanismo di conduzione nelle fibre mieliniche e amielinche, in relazione al loro diametro.}
+    \label{tab:vel_miel}
+\end{table}
+
+\subsection{Classificazione delle fibre mieliniche}
+Le fibre mieliniche possono essere classificate in base diverse caratteristiche. Oltre alla distinzione mieliniche e non, in \autoref{fig:cclassmiel} si può osservare la classificazione \h{generale} e quella delle \h{fibre sensoriali}.
+
+ Nella classificazione generale:
+\begin{itemize}
+    \item le fibre amieliniche:
+    \begin{itemize}
+        \item \textbf{Fibre C}: hanno Velocità ridotta (0,5-2 m/s), sono responsabili della trasmissione del dolore cronico.
+    \end{itemize}
+    \item mentre le fibre mielinizzate:
+    \begin{itemize}
+        \item \textbf{Fibre A$\alpha$}: diametro fino a 20 $\mu$m, velocità fino a 120 m/s (432 km/h). Queste fibre sono associate alle afferenze dei fusi neuromuscolari.
+        \item \textbf{Fibre A$\beta$}: Coinvolte nella trasmissione sensoriale tattile e propriocettiva.
+        \item \textbf{Fibre A$\gamma$}.
+        \item \textbf{Fibre A$\delta$}: Velocità di conduzione più lenta (6-30 m/s), coinvolte nella trasmissione del dolore acuto.
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{classmiel.png}
+    \caption{Classificazione fibre mieliniche.}
+    \label{fig:cclassmiel}
+\end{figure}
+
+Si noti che la fibra più veloce è quella dei fusi neuromuscolari, dunque non è una efferenza, bensì una afferenza. Quindi i motoneuroni $\alpha$ non sono le fibre pi veloci che possediamo.
+
+Per quanto riguarda la classificazione per afferenze sensoriali, si utilizzano i numeri romani per 4 sottoclassi (I, II, III, IV), dove la quarta è dedicata alle fibre non mieliniche. La classe I viene ulteriormente suddivisa in IA, per le afferenze principali, IB per quelle secondarie.
+
+\oss{Velocità di conduzione e funzione}{ \ 
+\begin{itemize}
+    \item I motoneuroni A$\alpha$ sono le fibre che comandano la contrazione del muscolo scheletrico.
+    \item Le fibre A$\beta$ comandano la sensibilità, ad eccezione del dolore, che è trasportato dalle fibre più lente A$\delta$ e C.
+    \item Le fibre A$\gamma$ sono rappresentate dai motoneuroni $\gamma$.
+\end{itemize}
+La funzionalità riflette la velocità di conduzione del segnale: la pressione evolutiva ha selezionato vie che consentono un tempo di elaborazione coerente con lo stimolo che gestiscono. Inoltre, tutti i neuroni che possediamo lavorano tendenzialmente in parallelo: solo al massimo tre neuroni si trovano in serie lungo una via, per minimizzare i tempi di trasmissione dell'informazione.
+}
+
+\section{Sinapsi}
+L'informazione mediata dal potenziale d'azione occorre essere scambiata a livello delle terminazioni nervose. Questo compito è svolto dalle \h{sinapsi}, che si distinguono in sinapsi \h{elettriche} e \h{chimiche}, a seconda del meccanismo di trasmissione. Le sinapsi sono anche chiamate \h{bottoni sinaptici}, parti specializzate della terminazione assonale.
+
+\autoref{fig:chemel} riassume le principali differenze tra sinapsi elettriche e chimiche. Quest'ultime sono in particolare più lente, in quanto il segnale deve essere convertito da elettrico a chimico, e viceversa.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{chemel.png}
+    \caption{Confronto sinapsi elettriche e chimiche.}
+    \label{fig:chemel}
+\end{figure}
+
+\oss{Distribuzione delle sinapsi chimiche nel feto e nell'adulto}{Nell'adulto c'è una netta maggioranza di sinapsi chimiche. Quelle elettriche sono proprie del sistema nervoso fetale e in alcuni tessuti di tipo non nervoso dell'adulto, come quello muscolare cardiaco.}
+
+\subsection{Confronto sinapsi chimiche ed elettriche}
+I due tipi di sinapsi sono differenziati da alcune caratteristiche. Dato che il tessuto nervoso non è sinciziale, ciascun neurone mantiene la sua identità spaziale e metabolica. Dunque, per far comunicare due cellule adiacenti occorre attraversare uno \h{spazio extracitoplasmatico}.
+\begin{itemize}
+    \item Nelle sinapsi elettriche, lo spazio intermembrana è sottile (3$\div$5 nm).
+    \item Nelle sinapsi chimiche, lo spessore è 10 volte superiore (20 $\div$ 40 nm).
+\end{itemize}
+La \h{continuità con il citoplasma} è un altro fattore fondamentale.
+\begin{itemize}
+    \item Nelle sinapsi elettriche c’è una struttura proteica che consente il passaggio non solo di ioni ma anche di piccoli nucleotidi fino alle dimensioni del glucosio. Quindi, cellule unite da sinapsi elettriche non sono unite solo dallo scambio di informazioni, ma possono sincronizzarsi dal punto di vista metabolico qualora questi messaggeri intracellulari siano in grado di avviare o bloccare certe vie. Si veda il tessuto cardiaco.
+    \oss{}{Può risultare problematico se sono mediati i segnali per l'apoptosi: da un evento ischemico di un nucleo iniziale, la degradazione cellulare si propaga a quelle adiacenti, mediante gap junction.}
+    \item Nelle sinapsi chimiche i due citoplasmi sono ben separati tra loro e non c’è uno scambio diretto di metaboliti.
+\end{itemize}
+Anche nelle \h{componenti ultrastrutturali} c’è una grande differenza:
+\begin{itemize}
+    \item A livello di sinapsi elettrica si ha la gap junction e questo sistema di giunzione è fatto da proteine (connessoni) che sono state formate per ciascuna metà dalla cellula corrispondente, poi successivamente giustapposte;
+    \item A livello delle sinapsi chimiche la situazione è più complessa: si hanno vescicole di neurotrasmettitore, un insieme di proteine e canali ionici nella parte presinaptica, uno spazio inter-sinaptico e poi i recettori per i neurotrasmettitori che si trovano sulla membrana dell’altra cellula (post-sinaptica).
+\end{itemize}
+La \h{tipologia di trasmissione} è differente:
+\begin{itemize}
+    \item Nelle sinapsi elettriche abbiamo una corrente ionica che passa da una cellula all’altra;
+    \item Nelle sinapsi chimiche si deve avere il mediatore chimico.
+\end{itemize}
+
+Le diverse caratteristiche elencate si riflettono nella diversa trasmissione del segnale:
+\begin{description}
+    \item[Ritardo di trasmissione]
+    \begin{itemize}
+        \item Nelle sinapsi di tipo elettrico non c’è perdita di tempo, sono istantanee;
+        \item Nelle sinapsi chimiche i passaggi di conversione e diffusione del neurotrasmettitore nello spazio inter-sinaptico portano via 1-5 ms. Questo ritardo è fondamentale perché consente la monodirezionalità.
+    \end{itemize}
+    \item[Direzione di trasmissione]
+    \begin{itemize}
+        \item La sinapsi elettrica è bidirezionale. Ci sono esempi di sinapsi che fanno eccezione, ma più spesso la prima delle due cellule che modifica il potenziale di membrana trasmette la corrente all’altra. È importante per le cellule cardiache poter trasmettere il segnale in entrambi i sensi poiché, così facendo, si ha la possibilità di evitare blocchi e si può così garantire la sincronia. Quando una cellula del miocardio si attiva, si attivano tutte in questa modalità;
+        \item Nella sinapsi chimica la direzione di trasmissione è unidirezionale ossia, salvo eccezioni, solo una delle cellule ha le vescicole di neurotrasmettitore mentre l’altra ha il suo recettore e quindi l’informazione va per forza dalla cellula pre alla post-sinaptica. Questo è l’unico modo per organizzare e regolare il flusso di informazioni.
+    \end{itemize}
+    \item[Affaticamento]
+    \begin{itemize}
+        \item Le sinapsi elettriche non si affaticano, continuano a funzionare;
+        \item Le sinapsi chimiche si possono affaticare. L’affaticamento consiste nel fatto che si può avere una carenza di neurotrasmettitore e quindi possedere vescicole vuote che non possono trasmettere segnale.
+    \end{itemize}
+\end{description}
+
+\subsection{Sinapsi chimiche}
+Le sinapsi chimiche sono caratterizzate da strutture altamente specializzate, tra cui vescicole contenenti neurotrasmettitori, canali ionici, lo spazio inter-sinaptico, recettori sulla membrana post-sinaptica e mitocondri. Questi ultimi sono fondamentali per fornire l'ATP necessaria per il funzionamento delle pompe che impacchettano i neurotrasmettitori nelle vescicole.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{prepost.png}
+    \caption{Componenti di una sinapsi chimica.}
+    \label{fig:prepost}
+\end{figure}
+
+Le vescicole sinaptiche non sono tutte funzionalmente equivalenti. Sebbene tutte contengano un neurotrasmettitore prevalente, la loro azione sulla cellula post-sinaptica può variare notevolmente. Questo implica che le vescicole possono avere effetti diversi a seconda del contesto e della specifica interazione sinaptica.
+
+Le vescicole di neurotrasmettitore sono suddivise in due pool funzionali principali:
+
+\begin{itemize}
+    \item \textbf{Pool di rilascio}: Queste vescicole sono posizionate in prossimità della membrana presinaptica e sono pronte a riversare il contenuto di neurotrasmettitore nello spazio sinaptico in risposta a un potenziale d'azione.
+    
+    \item \textbf{Pool di riserva}: Questo gruppo di vescicole si trova più distante dalla membrana e viene mantenuto in riserva per evitare l'affaticamento sinaptico. Le vescicole di questo pool sono ancorate all'actina dei microtubuli del citoscheletro.
+\end{itemize}
+
+Questa suddivisione funzionale garantisce una trasmissione sinaptica efficiente, permettendo alla sinapsi di rispondere rapidamente agli stimoli e, allo stesso tempo, di mantenere una riserva di neurotrasmettitori per prevenire l'esaurimento del segnale.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{pool.png}
+    \caption{Pool di rilascio e riserva.}
+    \label{fig:pool}
+\end{figure}
+
+\riassunto{3}{
+L'elettrofisiologia è comunemente studiata utilizzando il neurone come modello, ma i principi possono essere estesi anche ad altre cellule eccitabili come le cellule lisce, ghiandolari e striate scheletriche.
+
+\textbf{Il potenziale di riposo} è una misura della differenza di potenziale elettrico tra l'interno e l'esterno di una cellula eccitabile in stato di riposo. Utilizzando un esperimento con due elettrodi, uno immerso in una soluzione fisiologica e l'altro a contatto con il neurone, è possibile misurare questa differenza. In condizioni di riposo, la differenza di potenziale (d.d.p.) è di \textbf{-70 mV}, indicando che l'interno del neurone è più negativo rispetto all'esterno, che per convenzione è considerato a 0 mV. Il mantenimento di questo potenziale è dovuto alla selettiva permeabilità della membrana cellulare agli ioni, con una maggiore permeabilità a \textbf{K}$^+$, \textbf{Cl}$^-$ e una minore permeabilità a \textbf{Na}$^+$.
+
+\textbf{Le leggi fisiche} che regolano lo spostamento degli ioni attraverso la membrana possono essere descritte dalla legge generale dei flussi. Il flusso $J$ è il prodotto della forza coniugata al flusso $X$ per un coefficiente moltiplicativo $L$, espresso come $J = L X$. In un cilindro, il flusso attraverso una sezione infinitesimale può essere scritto come $J = c A \frac{\mathrm{d}x}{\mathrm{d}t}$, dove $c$ è la concentrazione, $A$ è l'area della sezione e $\frac{\mathrm{d}x}{\mathrm{d}t}$ è la velocità. All'equilibrio, il flusso è bilanciato dalla forza di attrito $R$, con $R = X$. Il coefficiente $U = 1 / n f$ rappresenta la mobilità ionica, che indica la capacità dello ione di attraversare la membrana.
+
+La \textbf{legge di Toerell} esprime il flusso di una specie ionica per unità di superficie $A$ come $J/A = c U X$, dove $c$ è la concentrazione, $U$ è la mobilità ionica e $X$ è la forza coniugata al flusso.
+
+\textbf{Il potenziale elettrico} di ogni ione può essere espresso come energia elettrochimica $W = \mu = \mu_0 + RT \ln{c} + zFV$, dove $R$ è la costante dei gas, $T$ è la temperatura, $c$ è la concentrazione, $z$ è la valenza, $F$ è la costante di Faraday e $V$ è il potenziale elettrico. La forza associata a questa energia è conservativa e può essere espressa come $X = -\nabla W$.
+
+L'\textbf{equazione di Nernst-Planck} è derivata dalla legge generale dei flussi e tiene conto dei gradienti chimici e elettrici. Essa è scritta come $J / A = - D \left( \frac{\mathrm{d}c}{\mathrm{d}x} +c \frac{z F}{RT} \frac{\mathrm{d}V}{\mathrm{d}x} \right)$, dove $D$ è il coefficiente di diffusione.
+
+La \textbf{legge di Henderson} descrive il potenziale elettrico generato da specie ioniche con diverse mobilità elettroforetica. L'equazione è $V = \frac{u^+-u^-}{u^++u^-}\frac{RT}{zF}\ln{\frac{c_1}{c_2}}$, con $u$ che rappresenta la mobilità elettroforetica. Tuttavia, questa equazione non sempre descrive accuratamente il potenziale osservato, come quello di -70 mV nel neurone, suggerendo la necessità di un'analisi più approfondita. Il \textbf{potenziale di equilibrio di Nernst} è dato dall'equazione $V = \frac{RT}{zF} \ln{\frac{c_1}{c_2}}$, che assume equilibrio quando il flusso netto è nullo.
+
+Il \textbf{rapporto di Donnan} si verifica quando una membrana permeabile agli ioni, ma non alle proteine, crea uno squilibrio chimico e elettrico. Il rapporto di concentrazione $r_D$ tra due scompartimenti è costante all'equilibrio, ma i modelli possono non riflettere completamente la realtà fisiologica. L'\textbf{equazione di Goldman-Hodgkin-Katz} estende l'equazione di Nernst includendo la permeabilità della membrana a più ioni. L'equazione è $V_m = \frac{RT}{F} \ln \left( \frac{P_{\text{K}^+}[\text{K}^+]_\text{ext} + P_{\text{Na}^+}[\text{Na}^+]_\text{ext} + P_{\text{Cl}^-}[\text{Cl}^-]_\text{in}}{P_{\text{K}^+}[\text{K}^+]_\text{in} + P_{\text{Na}^+}[\text{Na}^+]_\text{in} + P_{\text{Cl}^-}[\text{Cl}^-]_\text{ext}} \right)$, dove i coefficienti di permeabilità $P$ riflettono la differente permeabilità della membrana agli ioni. Le cellule vivono in uno stato di \textbf{disequilibrio stazionario}, mantenendo gradienti ionici e potenziale di membrana attraverso meccanismi attivi e consumo di energia esterna.
+
+\textbf{Modificazione del Potenziale di Membrana} Il \textbf{potenziale di membrana} di un neurone può essere modificato principalmente tramite la regolazione della \textbf{permeabilità ionica}, piuttosto che alterando significativamente le concentrazioni ioniche, le quali variano solo a lungo termine e a livello intracellulare.  Secondo la \textbf{legge di Goldman}, il potenziale di membrana è influenzato dalle permeabilità relative degli ioni e dai loro potenziali di equilibrio. Le permeabilità relative degli ioni sono:
+\[
+\begin{array}{|c|c|}
+    \hline
+    \textbf{Ione} & \textbf{Permeabilità} \\
+    \hline
+    \text{Potassio (K)} & 1 \\
+    \text{Cloro (Cl)} & 2 \\
+    \text{Sodio (Na)} & 0.013 \\
+    \hline
+\end{array}
+\]
+Il potenziale di membrana tende a avvicinarsi al potenziale di equilibrio dell'ione con la maggiore permeabilità. Per rendere il potenziale di membrana più negativo, un neurone può:
+\begin{itemize}
+    \item \textbf{Aumentare la permeabilità} per potassio e cloro,
+    \item \textbf{Ridurre la permeabilità} per il sodio.
+\end{itemize}
+
+Al contrario, per aumentare il potenziale di membrana, il neurone può:
+\begin{itemize}
+    \item \textbf{Ridurre la permeabilità} per potassio e cloro,
+    \item \textbf{Aumentare significativamente la permeabilità} per il sodio.
+\end{itemize}
+
+\textbf{Osservazione}: I farmaci agiscono modificando la permeabilità degli ioni, in particolare potassio e cloro, per influenzare l'attività neuronale e regolare stati di eccitazione o inibizione.
+
+\textbf{Legge di Ohm} La legge di Ohm può essere espressa come \( I = GV \) o in termini di conduttanza (\textbf{G}), utile in elettrofisiologia per due motivi principali:
+
+\begin{itemize}
+    \item \textbf{Misura sperimentale}: In elettrofisiologia si misura la conduttanza.
+    \item \textbf{Coerenza con la legge di Goldman}: La legge di Ohm in termini di conduttanza segue la logica della legge di Goldman.
+\end{itemize}
+
+Per gli ioni, la legge di Ohm si generalizza come \(I = G \cdot (V - V_{\text{ion}})\), dove \( V_{\text{ion}} \) è il potenziale di equilibrio dello ione e \( V \) è il potenziale di membrana. La forza elettromotrice \((V - V_{\text{ion}})\) determina il verso della corrente:
+
+\begin{itemize}
+    \item \textbf{Sodio}: Potenziale di equilibrio +66 mV, f.e.m. -66 mV, corrente entrante.
+    \item \textbf{Potassio}: Potenziale di equilibrio -97 mV, f.e.m. +97 mV, corrente uscente.
+    \item \textbf{Cloro}: Potenziale di equilibrio -90 mV, f.e.m. +90 mV, corrente uscente.
+\end{itemize}
+
+\textbf{Circuito Elettrico e Membrane Cellulari} La membrana cellulare può essere modellata come un circuito RC:
+\begin{itemize}
+    \item \textbf{Attraverso i canali ionici}: Gli ioni attraversano la membrana superando una resistenza elettrica.
+    \item \textbf{Metodo capacitivo}: La membrana agisce come un condensatore, accumulando carica.
+\end{itemize}
+
+La legge di Ohm applicata a circuiti RC indica che la variazione del potenziale è esponenziale
+\(i_R(t) = i(t) \left(1 - e^{-\frac{t}{\tau}}\right) \), dove \(\tau = RC\) è la \textbf{costante di tempo}. Il potenziale di membrana \(\Delta V_m(t)\) segue \(\Delta V_m(t) = i_m(t) R_m \left(1 - e^{-t/\tau}\right) \).
+
+\textbf{Costante di Spazio} Il comportamento lungo una fibra nervosa è descritto dalla costante di spazio \(\lambda\), definita come \( \lambda = \sqrt{{R_m}/{R_a}} \), dove \(R_a\) è la resistenza citoplasmatica e \(R_m\) è la resistenza di membrana. La costante di spazio influisce sulla capacità del segnale di propagarsi lungo l'assone.
+}
+
+\newpage
+\thispagestyle{empty}

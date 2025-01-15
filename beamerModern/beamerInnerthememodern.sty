@@ -1,0 +1,111 @@
+\mode<presentation>
+
+% Background.
+\defbeamertemplate*{background}{modern}{
+    % Titlepage.
+    \ifnum\c@framenumber=0
+    \begin{tikzpicture}[overlay, remember picture]
+        \if@bgphoto
+        \node at (current page.north) [anchor=north, inner sep=0pt, opacity=0.5] {\includegraphics[width=\paperwidth]{bgphoto_title.jpg}};
+        \fi
+        
+        %\node (foot) at (current page.south) [anchor=south, minimum width=\paperwidth, minimum height=0.4415\paperheight, fill=bluemodern] {};
+        
+         \draw[line width=2pt, black] (0.025\paperwidth,-0.5485\paperheight) -- (\paperwidth,-0.5485\paperheight);
+        
+        \if@nologo\else
+        \node at (foot.north) [anchor=south, inner sep=0.5cm] {
+            \if@bgphoto
+            \includegraphics[width=0.3\paperwidth]{logo_centrato_BN_positivo.png}
+            \else
+            \includegraphics[width=0.3\paperwidth]{logo_centrato_BN_positivo.png}
+            \fi
+        };
+        \fi
+        
+        %\node at ([shift={(0, -0.1)}] foot.north) {\includegraphics[width=\paperwidth]{decoration.pdf}};
+    \end{tikzpicture}
+    
+    
+    % Not the title pages.
+    \else
+    \begin{tikzpicture}[overlay, remember picture]
+        % header
+        %\node (head) at (current page.north) [anchor=north, minimum width=\paperwidth, minimum height=0.17\paperheight, fill=bluemodern] {};
+        %\node at ([shift={(0, 0.1)}] head.south) {\includegraphics[width=\paperwidth]{decoration.pdf}};
+        \draw[line width=1.5pt, black] (0.025\paperwidth,-0.17\paperheight) -- (\paperwidth,-0.17\paperheight);
+        
+        % footer
+        %\node (foot) at (current page.south) [anchor=south, minimum width=\paperwidth, minimum height=0.105\paperheight, fill=bluemodern] {};
+        \draw[line width=1pt, black] (0.025\paperwidth,-0.9\paperheight) -- (\paperwidth,-0.9\paperheight);
+    \end{tikzpicture}
+    \fi
+}
+
+% Only footer background. If plain.
+\defbeamertemplate*{background}{footer}{
+    \begin{tikzpicture}[overlay, remember picture]
+        %\node (foot) at (current page.south) [anchor=south, minimum width=\paperwidth, minimum height=0.105\paperheight, fill=bluemodern] {};
+        \draw[line width=1pt, black] (0.025\paperwidth,-0.9\paperheight) -- (\paperwidth,-0.9\paperheight);
+    \end{tikzpicture}
+}
+
+% Title page.
+\defbeamertemplate*{title page}{modern}[1][]
+{
+    \color{black}
+    \vspace{4.25cm}
+    
+    \begin{minipage}[t][\baselineskip]{\paperwidth}
+        {\Large\bf \inserttitle}
+    \end{minipage}
+    \\[\baselineskip]
+    \begin{minipage}[t][2\baselineskip]{\paperwidth}
+        {\large \insertsubtitle}
+    \end{minipage}
+    
+    \vfill
+    
+    \begin{minipage}[t][\baselineskip]{0.7\paperwidth}
+        {\large\bf \insertauthor}\\
+        \insertdate %
+    \end{minipage}
+    
+    %\begin{minipage}[t][\baselineskip]{\paperwidth}
+    %    \insertdate
+    %\end{minipage}
+    \addtocounter{framenumber}{-1}
+}
+
+% Table of Contents.
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{subsection in toc}{\leavevmode \leftskip=0.7em {\color{black} $\bullet$} \hskip1pt \inserttocsubsection\par}  
+
+% Section page.
+\defbeamertemplate*{section page}{modern}{
+    \begin{tikzpicture}[overlay, remember picture]
+        \node (foot) at (current page.south) [anchor=south, minimum width=\paperwidth, minimum height=0.4415\paperheight, fill=bluemodern] {};
+        \node at ([shift={(0, -0.1)}] foot.north) {\includegraphics[width=\paperwidth]{decoration.pdf}};
+        \path let \p1 = ([shift={(0, 0.105\paperheight+0.25)}] current page.south west), \p2 = (current page.east) in (\x1, \y1) edge [white, line width=0.5] (\x2, \y1);
+        \node at ([shift={(\xshift, 3.5)}] current page.south west) [anchor=north west, inner sep=0pt, text width=\textwidth]
+        {
+            {\color{black}\Large\bf \insertsection}
+        };
+    \end{tikzpicture}
+}
+\setbeamertemplate{section page}[modern]
+
+
+% Subsection page.
+\defbeamertemplate*{subsection page}{modern}{
+    \begin{tikzpicture}[overlay, remember picture]
+        \node (foot) at (current page.south) [anchor=south, minimum width=\paperwidth, minimum height=0.4415\paperheight, fill=bluemodern] {};
+        \node at ([shift={(0, -0.1)}] foot.north) {\includegraphics[width=\paperwidth]{decoration.pdf}};
+        \path let \p1 = ([shift={(0, 0.105\paperheight+0.25)}] current page.south east), \p2 = (current page.west) in (\paperwidth,\y1) edge [white, line width=0.5] (\x2,\y1);
+        \node at ([shift={(\xshift, 3.5)}] current page.south west) [anchor=north west, inner sep=0pt, text width=\textwidth]
+        {
+            {\color{black}\Large\bf \insertsubsection}
+        };
+    \end{tikzpicture}
+}
+\setbeamertemplate{subsection page}[modern]

@@ -1,0 +1,19 @@
+\documentclass[twoside,titlepage]{book}
+\usepackage{settings}
+
+\begin{document}
+    
+    \renewcommand{\title}{Titolo}
+    \newcommand{\subtitle}{Sottotitolo}
+    \author{Giacomo Lorenzon}
+    
+    \input{./chapters/title.tex}
+    
+    % body
+    \input{./chapters/preface.tex}
+    
+    \startmainmatter
+    \input{./chapters/body.tex}
+    \input{./chapters/comments.tex}
+    
+\end{document}
